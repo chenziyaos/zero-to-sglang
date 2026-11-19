@@ -1,0 +1,29 @@
+# 测试夹具：按 sglang 主干 8fabf5e 的真实日志格式构造，数值取 H100 80GB + Qwen3-8B 的推算量级，不是实机录制。
+# 用来验证 parse_startup_log.py 的正则；拿到自己的实机日志后以实机为准。
+[2026-10-28 15:30:01] server_args=ServerArgs(model_path='Qwen/Qwen3-8B', tokenizer_path='Qwen/Qwen3-8B', host='0.0.0.0', port=30000, mem_fraction_static=0.83, max_running_requests=None, chunked_prefill_size=8192, tp_size=1, served_model_name='qwen3', reasoning_parser='qwen3', tool_call_parser='qwen', enable_metrics=True)
+[2026-10-28 15:30:09 TP0] Init torch distributed begin.
+[2026-10-28 15:30:10 TP0] Init torch distributed ends. elapsed=0.62 s, mem usage=0.09 GB
+[2026-10-28 15:30:10 TP0] Load weight begin. avail mem=78.93 GB
+[2026-10-28 15:30:11 TP0] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:04<00:00,  1.12it/s]
+[2026-10-28 15:30:16 TP0] Load weight end. elapsed=5.31 s, type=Qwen3ForCausalLM, avail mem=63.62 GB, mem usage=15.31 GB.
+[2026-10-28 15:30:16 TP0] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 365312, K size: 25.08 GB, V size: 25.08 GB
+[2026-10-28 15:30:16 TP0] Memory pool end. avail mem=13.36 GB
+[2026-10-28 15:30:17 TP0] Capture target prefill CUDA graph begin. backend=full, num_tokens=[4, 8, 12, ..., 8192], avail mem=13.21 GB
+[2026-10-28 15:30:29 TP0] Capture target prefill CUDA graph end. elapsed=12.04 s, mem usage=0.41 GB, avail mem=12.80 GB
+[2026-10-28 15:30:29 TP0] Capture target decode CUDA graph begin. backend=full, num_tokens_per_req=1, avail mem=12.80 GB
+[2026-10-28 15:30:37 TP0] Capture target decode CUDA graph end. bs=[1, 2, 4, 8, 12, 16, 24, ..., 256], elapsed=7.86 s, mem usage=0.63 GB, avail mem=12.17 GB
+[2026-10-28 15:30:38 TP0] max_total_num_tokens=365312, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=4096, context_len=40960, available_gpu_mem=12.17 GB
+[2026-10-28 15:30:39] INFO:     Started server process [41237]
+[2026-10-28 15:30:39] INFO:     Waiting for application startup.
+[2026-10-28 15:30:39] INFO:     Application startup complete.
+[2026-10-28 15:30:39] INFO:     Uvicorn running on http://0.0.0.0:30000 (Press CTRL+C to quit)
+[2026-10-28 15:30:40 TP0] Prefill batch, #new-seq: 1, #new-token: 6, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 0.00
+[2026-10-28 15:30:41] INFO:     127.0.0.1:51432 - "POST /generate HTTP/1.1" 200 OK
+[2026-10-28 15:30:41] The server is fired up and ready to roll!
+[2026-10-28 15:31:02 TP0] Prefill batch, #new-seq: 1, #new-token: 18, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, cuda graph: True, input throughput (token/s): 1.92
+[2026-10-28 15:31:03 TP0] Decode batch, #running-req: 1, #token: 58, token usage: 0.00, cuda graph: True, gen throughput (token/s): 132.85, #queue-req: 0
+[2026-10-28 15:31:20 TP0] Prefill batch, #new-seq: 32, #new-token: 6144, #cached-token: 26624, token usage: 0.09, #running-req: 0, #queue-req: 96, #pending-token: 98304, cuda graph: True, input throughput (token/s): 41230.77
+[2026-10-28 15:31:21 TP0] Prefill batch, #new-seq: 32, #new-token: 6144, #cached-token: 26624, token usage: 0.18, #running-req: 32, #queue-req: 64, #pending-token: 65536, cuda graph: True, input throughput (token/s): 43991.20
+[2026-10-28 15:31:22 TP0] Decode batch, #running-req: 128, #token: 133120, token usage: 0.36, cuda graph: True, gen throughput (token/s): 5873.41, #queue-req: 0
+[2026-10-28 15:31:25 TP0] Decode batch, #running-req: 300, #token: 310000, token usage: 0.85, cuda graph: False, gen throughput (token/s): 8120.06, #queue-req: 12

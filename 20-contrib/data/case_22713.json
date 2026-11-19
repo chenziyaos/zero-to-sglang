@@ -1,0 +1,51 @@
+{
+ "issue": {
+  "number": 22713,
+  "title": "[Bug] sglang:utilization never reflects load because max_running_requests_under_SLO is never populated",
+  "opened": "2026-04-13",
+  "closed": "2026-06-13"
+ },
+ "title_check_since": "2026-10-14（#44165）",
+ "prs": [
+  {"number": 22881, "assoc": "CONTRIBUTOR", "opened": "04-15", "closed": "06-10", "outcome": "未合并",
+   "title": "fix: utilization metric falls back to max_running_requests when SLO cap is unset",
+   "files": [[49, 0, "python/sglang/multimodal_gen/configs/pipeline_configs/diffusers_generic.py"],
+             [6, 25, "python/sglang/multimodal_gen/registry.py"],
+             [5, 6, "python/sglang/srt/observability/scheduler_metrics_mixin.py"]],
+   "note": "3 个文件里 2 个是 diffusion 的无关改动；Test Plan 里起服务验证那一项没勾；作者两个月后清理积压时自己关掉"},
+  {"number": 23212, "assoc": "CONTRIBUTOR", "opened": "04-20", "closed": "08-24", "outcome": "未合并",
+   "title": "fix(metrics): use max_running_requests as OSS fallback for utilization metric",
+   "files": [[3, 0, "python/sglang/srt/managers/scheduler.py"],
+             [1, 0, "python/sglang/srt/observability/metrics_collector.py"],
+             [9, 0, "python/sglang/srt/observability/scheduler_metrics_mixin.py"],
+             [12, 0, "python/sglang/srt/speculative/dflash_worker.py"],
+             [19, 0, "python/sglang/srt/speculative/eagle_worker_v2.py"],
+             [21, 0, "python/sglang/srt/speculative/multi_layer_eagle_worker.py"],
+             [20, 0, "python/sglang/srt/speculative/multi_layer_eagle_worker_v2.py"]],
+   "note": "维护者关闭时写：把 utilization 和无关的投机解码 tracing 混在一起，剩下的问题应当在当前主干上单独提一个聚焦的改动"},
+  {"number": 24811, "assoc": "COLLABORATOR", "opened": "05-09", "closed": "05-10", "outcome": "未合并",
+   "title": "Annotate dead max_running_requests_under_SLO read sites",
+   "files": [[1, 0, "python/sglang/srt/managers/scheduler.py"],
+             [1, 0, "python/sglang/srt/observability/scheduler_metrics_mixin.py"]],
+   "note": "协作者给两处读点加 TODO 注释，第二天关掉、换成 #25441 重提"},
+  {"number": 25441, "assoc": "COLLABORATOR", "opened": "05-16", "closed": "05-16", "outcome": "合并",
+   "title": "Annotate dead max_running_requests_under_SLO",
+   "files": [[1, 0, "python/sglang/srt/managers/scheduler.py"],
+             [1, 0, "python/sglang/srt/observability/scheduler_metrics_mixin.py"]],
+   "note": "同样两行注释，开出来 32 秒后由作者自己合并；标题按今天的规则过不了检查。8fabf5e 上的 TODO 就是它留下的"},
+  {"number": 27465, "assoc": "NONE", "opened": "06-06", "closed": "09-13", "outcome": "未合并",
+   "title": "[Bugfix] Fall back to max_running_requests for sglang:utilization in OSS codepath",
+   "files": [[11, 3, "python/sglang/srt/managers/scheduler_components/metrics_reporter.py"]],
+   "note": "改法和本篇一样且只动一个文件，但没有单测，测试一节只写了「起个服务就能验证」，CI 有红；挂了 98 天被机器人按无活动关闭"},
+  {"number": 31461, "assoc": "NONE", "opened": "07-16", "closed": "07-27", "outcome": "未合并",
+   "title": "[server] Allow max_running_requests to be tuned at runtime via /set_internal_state",
+   "files": [[23, 0, "python/sglang/srt/managers/scheduler.py"],
+             [92, 0, "test/registered/unit/managers/test_scheduler_set_internal_state.py"]],
+   "note": "带了单测，但换了题目：做的是运行时改 max_running_requests 的新功能，utilization 只是顺带；新功能要先有维护者认同设计"}
+ ],
+ "proposal": {
+  "title": "[Fix] observability: Fall back to max_running_requests for sglang:utilization",
+  "files": [[8, 8, "python/sglang/srt/managers/scheduler_components/metrics_reporter.py"],
+            [77, 0, "test/registered/unit/managers/scheduler_components/test_metrics_reporter.py"]]
+ }
+}

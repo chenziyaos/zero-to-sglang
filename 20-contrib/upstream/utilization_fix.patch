@@ -1,0 +1,111 @@
+diff --git a/python/sglang/srt/managers/scheduler_components/metrics_reporter.py b/python/sglang/srt/managers/scheduler_components/metrics_reporter.py
+index 5824efe..6dcd352 100644
+--- a/python/sglang/srt/managers/scheduler_components/metrics_reporter.py
++++ b/python/sglang/srt/managers/scheduler_components/metrics_reporter.py
+@@ -1304,15 +1304,15 @@ class SchedulerMetricsReporter:
+         if self.scheduler.disaggregation_mode == DisaggregationMode.PREFILL:
+             self.stats.utilization = -1
+         else:
+-            # TODO: max_running_requests_under_SLO has no setter — sglang:utilization stuck at 0 (regressed #22713).
+-            max_under_slo = getattr(
+-                self.scheduler, "max_running_requests_under_SLO", None
++            # max_running_requests_under_SLO has no setter in OSS (#22713); fall
++            # back to the scheduler's running-request cap so the gauge tracks load.
++            capacity = getattr(self.scheduler, "max_running_requests_under_SLO", None)
++            if not capacity or capacity <= 0:
++                capacity = self.scheduler.max_running_requests
++            self.stats.utilization = max(
++                self.stats.num_running_reqs.total / capacity,
++                self.stats.token_usage / 0.9,
+             )
+-            if max_under_slo is not None and max_under_slo > 0:
+-                self.stats.utilization = max(
+-                    self.stats.num_running_reqs.total / max_under_slo,
+-                    self.stats.token_usage / 0.9,
+-                )
+ 
+     def forward_occupancy_log_string(self) -> str:
+         now_ns = time.monotonic_ns()
+diff --git a/test/registered/unit/managers/scheduler_components/test_metrics_reporter.py b/test/registered/unit/managers/scheduler_components/test_metrics_reporter.py
+new file mode 100644
+index 0000000..176478b
+--- /dev/null
++++ b/test/registered/unit/managers/scheduler_components/test_metrics_reporter.py
+@@ -0,0 +1,77 @@
++"""Unit tests for SchedulerMetricsReporter._calculate_utilization (#22713)."""
++
++import unittest
++from types import SimpleNamespace
++
++from sglang.test.ci.ci_register import register_cpu_ci
++from sglang.test.test_utils import CustomTestCase, maybe_stub_sgl_kernel
++
++maybe_stub_sgl_kernel()
++
++from sglang.srt.disaggregation.utils import DisaggregationMode  # noqa: E402
++from sglang.srt.managers.scheduler_components.metrics_reporter import (  # noqa: E402
++    SchedulerMetricsReporter,
++)
++from sglang.srt.observability.metrics_collector import (  # noqa: E402
++    QueueCount,
++    SchedulerStats,
++)
++
++register_cpu_ci(est_time=5, suite="base-a-test-cpu")
++
++
++def _reporter(*, mode=DisaggregationMode.NULL, max_running=64, under_slo=None):
++    reporter = SchedulerMetricsReporter.__new__(SchedulerMetricsReporter)
++    reporter.stats = SchedulerStats()
++    reporter.scheduler = SimpleNamespace(
++        disaggregation_mode=mode, max_running_requests=max_running
++    )
++    if under_slo is not None:
++        reporter.scheduler.max_running_requests_under_SLO = under_slo
++    return reporter
++
++
++def _utilization(reporter, *, running, token_usage):
++    reporter.stats.num_running_reqs = QueueCount(total=running)
++    reporter.stats.token_usage = token_usage
++    reporter._calculate_utilization()
++    return reporter.stats.utilization
++
++
++class TestCalculateUtilization(CustomTestCase):
++    def test_falls_back_to_max_running_requests(self):
++        self.assertAlmostEqual(
++            _utilization(_reporter(), running=32, token_usage=0.0), 0.5
++        )
++
++    def test_token_usage_dominates_when_kv_is_the_bottleneck(self):
++        self.assertAlmostEqual(
++            _utilization(_reporter(), running=8, token_usage=0.72), 0.8
++        )
++
++    def test_idle_scheduler_reports_zero(self):
++        self.assertEqual(_utilization(_reporter(), running=0, token_usage=0.0), 0.0)
++
++    def test_slo_cap_takes_precedence_when_set(self):
++        reporter = _reporter(under_slo=16)
++        self.assertAlmostEqual(_utilization(reporter, running=8, token_usage=0.0), 0.5)
++
++    def test_non_positive_slo_cap_is_ignored(self):
++        reporter = _reporter(under_slo=0)
++        self.assertAlmostEqual(
++            _utilization(reporter, running=16, token_usage=0.0), 0.25
++        )
++
++    def test_decode_worker_uses_the_same_formula(self):
++        reporter = _reporter(mode=DisaggregationMode.DECODE)
++        self.assertAlmostEqual(
++            _utilization(reporter, running=48, token_usage=0.0), 0.75
++        )
++
++    def test_prefill_worker_reports_minus_one(self):
++        reporter = _reporter(mode=DisaggregationMode.PREFILL)
++        self.assertEqual(_utilization(reporter, running=48, token_usage=0.5), -1)
++
++
++if __name__ == "__main__":
++    unittest.main()

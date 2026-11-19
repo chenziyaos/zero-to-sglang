@@ -1,0 +1,2 @@
+8	8	python/sglang/srt/managers/scheduler_components/metrics_reporter.py
+77	0	test/registered/unit/managers/scheduler_components/test_metrics_reporter.py

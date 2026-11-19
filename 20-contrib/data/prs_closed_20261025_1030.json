@@ -1,0 +1,2702 @@
+[
+{
+"n": 47403,
+"t": "[Fix] speculative: Validate adaptive policy options before startup",
+"a": "NONE",
+"c": "2026-10-30T06:27:27Z",
+"x": "2026-10-30T06:28:28Z",
+"m": null,
+"d": false
+},
+{
+"n": 47394,
+"t": "[Doc] [AMD] cookbook: Update Muse Spark Open MI355X AgentX recipe to the 1027 image",
+"a": "COLLABORATOR",
+"c": "2026-10-30T05:07:35Z",
+"x": "2026-10-30T05:24:06Z",
+"m": "2026-10-30T05:24:06Z",
+"d": false
+},
+{
+"n": 47369,
+"t": "[AMD] muse-spark: ROCm day0",
+"a": "COLLABORATOR",
+"c": "2026-10-30T02:14:28Z",
+"x": "2026-10-30T02:23:58Z",
+"m": null,
+"d": true
+},
+{
+"n": 47366,
+"t": "[Fix] disaggregation: Keep output ids during a PD rebootstrap instead of popping and replaying the last one",
+"a": "COLLABORATOR",
+"c": "2026-10-30T01:58:04Z",
+"x": "2026-10-30T03:15:22Z",
+"m": "2026-10-30T03:15:22Z",
+"d": false
+},
+{
+"n": 47365,
+"t": "[CI] [NPU] coverage: Refresh the coverage baseline every 2 days and raise the publish gate to 40%",
+"a": "CONTRIBUTOR",
+"c": "2026-10-30T01:55:27Z",
+"x": "2026-10-30T02:24:44Z",
+"m": "2026-10-30T02:24:44Z",
+"d": false
+},
+{
+"n": 47362,
+"t": "[CI] [AMD] aiter: Update ROCm AITER pin to 26f4f1fb2 (gfx1250 only)",
+"a": "CONTRIBUTOR",
+"c": "2026-10-30T01:37:43Z",
+"x": "2026-10-30T05:01:07Z",
+"m": "2026-10-30T05:01:07Z",
+"d": false
+},
+{
+"n": 47358,
+"t": "[Refactor] multimodal: [sglang-miles] Let token-space strategies declare media decoding and the video device",
+"a": "COLLABORATOR",
+"c": "2026-10-30T00:43:19Z",
+"x": "2026-10-30T05:55:17Z",
+"m": "2026-10-30T05:55:17Z",
+"d": false
+},
+{
+"n": 47355,
+"t": "[Refactor] multimodal: [sglang-miles] Register token-space strategies through a registry function trainers can call",
+"a": "COLLABORATOR",
+"c": "2026-10-30T00:17:57Z",
+"x": "2026-10-30T05:55:16Z",
+"m": "2026-10-30T05:55:16Z",
+"d": false
+},
+{
+"n": 47345,
+"t": "[Refactor] multimodal: Register token-space strategies through an explicit registry function",
+"a": "COLLABORATOR",
+"c": "2026-10-29T23:50:01Z",
+"x": "2026-10-30T00:12:17Z",
+"m": null,
+"d": true
+},
+{
+"n": 47338,
+"t": "[Refactor] detokenizer: Move the incremental decode state and step into incremental_detokenize.py",
+"a": "COLLABORATOR",
+"c": "2026-10-29T22:39:15Z",
+"x": "2026-10-29T23:32:59Z",
+"m": "2026-10-29T23:32:59Z",
+"d": false
+},
+{
+"n": 47335,
+"t": "[Test] managers: Check output_ids in the router grouping test",
+"a": "COLLABORATOR",
+"c": "2026-10-29T21:32:25Z",
+"x": "2026-10-29T21:35:27Z",
+"m": "2026-10-29T21:35:27Z",
+"d": false
+},
+{
+"n": 47328,
+"t": "[Perf] [NVIDIA] deep_select: Add a 3-CTA tier for the paged indexer top-k",
+"a": "COLLABORATOR",
+"c": "2026-10-29T21:10:08Z",
+"x": "2026-10-29T23:32:00Z",
+"m": "2026-10-29T23:32:00Z",
+"d": false
+},
+{
+"n": 47325,
+"t": "Withdrawn",
+"a": "NONE",
+"c": "2026-10-29T20:58:20Z",
+"x": "2026-10-30T01:09:40Z",
+"m": null,
+"d": false
+},
+{
+"n": 47307,
+"t": "[Perf] [AMD] mooncake: pack heterogeneous-TP SWA KV pages",
+"a": "COLLABORATOR",
+"c": "2026-10-29T18:39:38Z",
+"x": "2026-10-29T19:19:52Z",
+"m": null,
+"d": true
+},
+{
+"n": 47304,
+"t": "[Perf] dsv41: Drop per-layer routing glue under simulated routing with EPLB",
+"a": "COLLABORATOR",
+"c": "2026-10-29T17:46:20Z",
+"x": "2026-10-29T21:45:59Z",
+"m": "2026-10-29T21:45:59Z",
+"d": false
+},
+{
+"n": 47303,
+"t": "[Doc] cookbook: Add MiniMax-M3.1-Flash B300 TP2 SPF AgentX points",
+"a": "COLLABORATOR",
+"c": "2026-10-29T17:28:47Z",
+"x": "2026-10-29T17:33:31Z",
+"m": "2026-10-29T17:33:31Z",
+"d": false
+},
+{
+"n": 47300,
+"t": "[Fix] TensorMatcher: keep symbol device/dtype options; use kDLGPU aliases",
+"a": "COLLABORATOR",
+"c": "2026-10-29T17:17:51Z",
+"x": "2026-10-30T00:34:26Z",
+"m": "2026-10-30T00:34:26Z",
+"d": false
+},
+{
+"n": 47290,
+"t": "[Feat] tbo: Add opt-in threshold-based admission policy",
+"a": "NONE",
+"c": "2026-10-29T15:32:21Z",
+"x": "2026-10-30T02:25:15Z",
+"m": null,
+"d": true
+},
+{
+"n": 47286,
+"t": "[Fix] attention: Skip the MSA-v1 QMUL4 prefill case when QMUL4 is unavailable",
+"a": "CONTRIBUTOR",
+"c": "2026-10-29T14:37:16Z",
+"x": "2026-10-29T21:11:47Z",
+"m": "2026-10-29T21:11:47Z",
+"d": false
+},
+{
+"n": 47263,
+"t": "[DeepEP] Give each TBO sub-batch its own normal-mode buffer",
+"a": "NONE",
+"c": "2026-10-29T12:07:48Z",
+"x": "2026-10-29T13:20:50Z",
+"m": null,
+"d": false
+},
+{
+"n": 47258,
+"t": "[Perf] qwen: Add experimental L2 weight prefetching around TP AllReduce",
+"a": "CONTRIBUTOR",
+"c": "2026-10-29T11:14:49Z",
+"x": "2026-10-29T11:16:11Z",
+"m": null,
+"d": true
+},
+{
+"n": 47257,
+"t": "[CI] chore: add CI permissions for xulunfan",
+"a": "NONE",
+"c": "2026-10-29T11:06:35Z",
+"x": "2026-10-30T06:24:58Z",
+"m": null,
+"d": false
+},
+{
+"n": 47249,
+"t": "[Refactor] scheduler: Drop the dead Req.decoded_text and BatchTokenIDOutput.decoded_texts",
+"a": "COLLABORATOR",
+"c": "2026-10-29T10:06:17Z",
+"x": "2026-10-29T21:09:07Z",
+"m": "2026-10-29T21:09:07Z",
+"d": false
+},
+{
+"n": 47246,
+"t": "[CI] slash-command: Write the /run-cpu-ci result back to its reply comment",
+"a": "COLLABORATOR",
+"c": "2026-10-29T09:48:47Z",
+"x": "2026-10-29T10:59:12Z",
+"m": "2026-10-29T10:59:12Z",
+"d": false
+},
+{
+"n": 47244,
+"t": "[CI] [AMD] workflows: Run scheduled Extra tests, stop skipping nightly tests, merge MI35x 1-GPU jobs- #47238",
+"a": "COLLABORATOR",
+"c": "2026-10-29T09:44:11Z",
+"x": "2026-10-29T15:48:00Z",
+"m": "2026-10-29T15:48:00Z",
+"d": false
+},
+{
+"n": 47238,
+"t": "[CI] [AMD] workflows: Run scheduled Extra tests, stop skipping nightly tests, merge MI35x 1-GPU jobs",
+"a": "COLLABORATOR",
+"c": "2026-10-29T09:07:17Z",
+"x": "2026-10-29T09:48:25Z",
+"m": null,
+"d": true
+},
+{
+"n": 47232,
+"t": "[Perf] [NVIDIA] deepseek_v41: enable small-batch dense split-K by default",
+"a": "CONTRIBUTOR",
+"c": "2026-10-29T08:52:43Z",
+"x": "2026-10-29T09:29:29Z",
+"m": null,
+"d": true
+},
+{
+"n": 47230,
+"t": "[CI] [NPU] coverage: Automated OBS baseline upload and retry-safe attempt merging",
+"a": "CONTRIBUTOR",
+"c": "2026-10-29T08:34:26Z",
+"x": "2026-10-29T09:16:29Z",
+"m": "2026-10-29T09:16:29Z",
+"d": false
+},
+{
+"n": 47227,
+"t": "[Fix] state_capturer: Prevent routed-expert capture overflow during unchunked prefill",
+"a": "NONE",
+"c": "2026-10-29T08:21:08Z",
+"x": "2026-10-29T08:23:21Z",
+"m": null,
+"d": false
+},
+{
+"n": 47225,
+"t": "[Perf] kda: Extend fused verify windows",
+"a": "COLLABORATOR",
+"c": "2026-10-29T08:12:28Z",
+"x": "2026-10-29T12:08:14Z",
+"m": null,
+"d": false
+},
+{
+"n": 47217,
+"t": "[Fix] [NPU] docker: Bump SGLANG_KERNEL_NPU_TAG to 2026.9.0.post12",
+"a": "CONTRIBUTOR",
+"c": "2026-10-29T07:49:04Z",
+"x": "2026-10-29T12:41:52Z",
+"m": "2026-10-29T12:41:52Z",
+"d": false
+},
+{
+"n": 47216,
+"t": "[Fix] [NPU] dspark: Avoid double-counting verify KV lengths in graph replay",
+"a": "CONTRIBUTOR",
+"c": "2026-10-29T07:47:42Z",
+"x": "2026-10-30T02:08:02Z",
+"m": "2026-10-30T02:08:02Z",
+"d": false
+},
+{
+"n": 47215,
+"t": "K3 strict keys truncation",
+"a": "NONE",
+"c": "2026-10-29T07:42:03Z",
+"x": "2026-10-29T07:42:16Z",
+"m": null,
+"d": false
+},
+{
+"n": 47214,
+"t": "[Doc] cookbook: Refresh SemiAnalysis AgentX launches to InferenceX main 70a76017",
+"a": "COLLABORATOR",
+"c": "2026-10-29T07:14:52Z",
+"x": "2026-10-29T07:49:04Z",
+"m": "2026-10-29T07:49:04Z",
+"d": false
+},
+{
+"n": 47212,
+"t": "[Doc] cookbook: Add a new cookbook page (WIP)",
+"a": "COLLABORATOR",
+"c": "2026-10-29T06:43:11Z",
+"x": "2026-10-29T13:42:13Z",
+"m": "2026-10-29T13:42:13Z",
+"d": false
+},
+{
+"n": 47208,
+"t": "[CI] [PPU] slash-command: Register PPU with shared opt-in CI tiers",
+"a": "CONTRIBUTOR",
+"c": "2026-10-29T06:10:27Z",
+"x": "2026-10-30T01:20:47Z",
+"m": "2026-10-30T01:20:47Z",
+"d": false
+},
+{
+"n": 47202,
+"t": "[Fix] [AMD] dsv4: stop per-batch Triton recompiles of the FP4 prefill schedule prep kernel",
+"a": "CONTRIBUTOR",
+"c": "2026-10-29T05:30:39Z",
+"x": "2026-10-29T06:45:17Z",
+"m": null,
+"d": true
+},
+{
+"n": 47198,
+"t": "[Chore] release: Cherry-pick [Feat] grpc: Advertise media inputs in GetServerInfo to release/v0.5.23 (#46882)",
+"a": "COLLABORATOR",
+"c": "2026-10-29T04:49:45Z",
+"x": "2026-10-29T05:22:02Z",
+"m": "2026-10-29T05:22:02Z",
+"d": false
+},
+{
+"n": 47197,
+"t": "[Fix] hicache: Isolate NIXL storage tests from background eviction",
+"a": "COLLABORATOR",
+"c": "2026-10-29T04:44:15Z",
+"x": "2026-10-29T07:04:02Z",
+"m": "2026-10-29T07:04:02Z",
+"d": false
+},
+{
+"n": 47195,
+"t": "[Fix] benchmark: Pass request pool to one-batch tree cache",
+"a": "COLLABORATOR",
+"c": "2026-10-29T04:28:26Z",
+"x": "2026-10-29T06:06:01Z",
+"m": null,
+"d": false
+},
+{
+"n": 47194,
+"t": "[CI] [AMD] miles: drop the ROCm 7.2.4 MI35X nightly image build",
+"a": "COLLABORATOR",
+"c": "2026-10-29T04:23:05Z",
+"x": "2026-10-29T06:28:00Z",
+"m": "2026-10-29T06:28:00Z",
+"d": false
+},
+{
+"n": 47192,
+"t": "[Perf] [AMD] mori: pack KV pages for heterogeneous TP",
+"a": "COLLABORATOR",
+"c": "2026-10-29T04:20:13Z",
+"x": "2026-10-29T19:19:50Z",
+"m": null,
+"d": true
+},
+{
+"n": 47185,
+"t": "[Fix] benchmark: Pass req_to_token_pool to bench_one_batch dummy tree cache",
+"a": "COLLABORATOR",
+"c": "2026-10-29T03:12:21Z",
+"x": "2026-10-30T02:33:11Z",
+"m": null,
+"d": false
+},
+{
+"n": 47183,
+"t": "[Feat] Spark2.5: Support Spark2.5 Dspark",
+"a": "NONE",
+"c": "2026-10-29T02:57:36Z",
+"x": "2026-10-29T06:39:47Z",
+"m": null,
+"d": false
+},
+{
+"n": 47182,
+"t": "[Fix] Catch OSError when probing torchcodec so broken installs fall back to decord",
+"a": "NONE",
+"c": "2026-10-29T02:53:45Z",
+"x": "2026-10-29T03:57:29Z",
+"m": null,
+"d": false
+},
+{
+"n": 47178,
+"t": "[Perf] scheduler: Send the per-request output stats only when they may have changed",
+"a": "COLLABORATOR",
+"c": "2026-10-29T02:48:07Z",
+"x": "2026-10-29T20:54:33Z",
+"m": "2026-10-29T20:54:33Z",
+"d": false
+},
+{
+"n": 47176,
+"t": "[Doc] diffusion: Index HY-Nomas and FastH3 Omni",
+"a": "COLLABORATOR",
+"c": "2026-10-29T02:40:05Z",
+"x": "2026-10-29T08:33:30Z",
+"m": "2026-10-29T08:33:30Z",
+"d": false
+},
+{
+"n": 47169,
+"t": "[Feat] rust-server: Report the model's launch-time fields in /model_info",
+"a": "COLLABORATOR",
+"c": "2026-10-29T01:49:32Z",
+"x": "2026-10-29T17:09:29Z",
+"m": "2026-10-29T17:09:29Z",
+"d": false
+},
+{
+"n": 47168,
+"t": "[Fix] mem_cache: Default hicache_write_back_staging on MLAView",
+"a": "COLLABORATOR",
+"c": "2026-10-29T01:46:15Z",
+"x": "2026-10-29T02:42:29Z",
+"m": "2026-10-29T02:42:29Z",
+"d": false
+},
+{
+"n": 47166,
+"t": "[Perf] observability: Send scheduler timing to the tokenizer as typed reports",
+"a": "COLLABORATOR",
+"c": "2026-10-29T01:02:37Z",
+"x": "2026-10-29T01:47:40Z",
+"m": "2026-10-29T01:47:40Z",
+"d": false
+},
+{
+"n": 47163,
+"t": "[Fix] [AMD] docker: Remove implicit INT8 QuickReduce default as it causes accuracy issues in 800k+ long context evals",
+"a": "COLLABORATOR",
+"c": "2026-10-29T00:36:16Z",
+"x": "2026-10-29T03:53:57Z",
+"m": "2026-10-29T03:53:57Z",
+"d": false
+},
+{
+"n": 47162,
+"t": "[CI] [AMD] ci: Spread out tests and prefer today's images",
+"a": "COLLABORATOR",
+"c": "2026-10-29T00:07:31Z",
+"x": "2026-10-29T09:09:43Z",
+"m": "2026-10-29T09:09:43Z",
+"d": false
+},
+{
+"n": 47161,
+"t": "[Perf] rust-server: Pin frontend threads to one shared CPU set, not one core each",
+"a": "COLLABORATOR",
+"c": "2026-10-28T23:35:33Z",
+"x": "2026-10-29T17:09:18Z",
+"m": "2026-10-29T17:09:18Z",
+"d": false
+},
+{
+"n": 47158,
+"t": "[Refactor] engine: Make the follower-rank SIGTERM handler an overridable classmethod",
+"a": "COLLABORATOR",
+"c": "2026-10-28T23:19:42Z",
+"x": "2026-10-29T18:32:17Z",
+"m": "2026-10-29T18:32:17Z",
+"d": false
+},
+{
+"n": 47156,
+"t": "[Perf] [AMD] qwen3_5: read the GDN in_proj outputs as strided views under the Qwen3.8 prefill prologue",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T23:16:51Z",
+"x": "2026-10-29T07:30:44Z",
+"m": null,
+"d": true
+},
+{
+"n": 47155,
+"t": "[Perf] [AMD] qwen3_5: fuse SiLU-and-mul with the down_proj MXFP4 input quantization (bit-exact)",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T23:16:48Z",
+"x": "2026-10-29T07:30:48Z",
+"m": null,
+"d": true
+},
+{
+"n": 47151,
+"t": "[CI] [AMD] pr-test: Run stage-c-test-large-8-gpu-amd as one job",
+"a": "COLLABORATOR",
+"c": "2026-10-28T22:45:39Z",
+"x": "2026-10-29T00:28:27Z",
+"m": "2026-10-29T00:28:27Z",
+"d": false
+},
+{
+"n": 47149,
+"t": "[Perf] dsv4: Fix amax8_varlen and mega MoE pre-dispatch grids for 1024-thread SMs",
+"a": "COLLABORATOR",
+"c": "2026-10-28T22:27:05Z",
+"x": "2026-10-30T03:41:58Z",
+"m": "2026-10-30T03:41:58Z",
+"d": false
+},
+{
+"n": 47148,
+"t": "[Perf] dsv41: Run MegaGate routing in prefill",
+"a": "COLLABORATOR",
+"c": "2026-10-28T22:22:13Z",
+"x": "2026-10-28T22:53:36Z",
+"m": "2026-10-28T22:53:36Z",
+"d": false
+},
+{
+"n": 47146,
+"t": "[Fix] dsv4: Capture the replay tail thread-locally while serving",
+"a": "COLLABORATOR",
+"c": "2026-10-28T21:52:47Z",
+"x": "2026-10-28T22:01:55Z",
+"m": "2026-10-28T22:01:55Z",
+"d": false
+},
+{
+"n": 47145,
+"t": "[Fix] docker: update NVIDIA megakernel pin to tested commit",
+"a": "COLLABORATOR",
+"c": "2026-10-28T21:45:06Z",
+"x": "2026-10-28T21:57:20Z",
+"m": "2026-10-28T21:57:20Z",
+"d": false
+},
+{
+"n": 47136,
+"t": "[Feat] DeepSeek-V4.1: Expand the bounded decoder replay window",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T20:03:42Z",
+"x": "2026-10-29T02:38:03Z",
+"m": null,
+"d": true
+},
+{
+"n": 47135,
+"t": "[Feat] lora: upsert on /load_lora_adapter",
+"a": "NONE",
+"c": "2026-10-28T19:53:31Z",
+"x": "2026-10-30T02:21:55Z",
+"m": "2026-10-30T02:21:55Z",
+"d": false
+},
+{
+"n": 47134,
+"t": "[CI] chore: add CI permissions for chenxb002",
+"a": "COLLABORATOR",
+"c": "2026-10-28T19:53:18Z",
+"x": "2026-10-29T04:39:36Z",
+"m": "2026-10-29T04:39:36Z",
+"d": false
+},
+{
+"n": 47133,
+"t": "[CI] chore: add CI permissions for Vinsmoke86",
+"a": "COLLABORATOR",
+"c": "2026-10-28T19:45:12Z",
+"x": "2026-10-29T04:39:16Z",
+"m": "2026-10-29T04:39:16Z",
+"d": false
+},
+{
+"n": 47127,
+"t": "[Fix] mem_cache: Build an empty KVLayerRouter from empty layer maps",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T19:32:34Z",
+"x": "2026-10-29T12:11:05Z",
+"m": "2026-10-29T12:11:05Z",
+"d": false
+},
+{
+"n": 47124,
+"t": "[Feat] disaggregation: Decode host receive on the unified page-envelope host pool",
+"a": "COLLABORATOR",
+"c": "2026-10-28T18:44:00Z",
+"x": "2026-10-29T18:32:34Z",
+"m": "2026-10-29T18:32:34Z",
+"d": false
+},
+{
+"n": 47122,
+"t": "[CI] slash-command: Require explicit hardware for Extra CI",
+"a": "COLLABORATOR",
+"c": "2026-10-28T18:26:34Z",
+"x": "2026-10-28T20:52:44Z",
+"m": "2026-10-28T20:52:44Z",
+"d": false
+},
+{
+"n": 47118,
+"t": "[CI] [AMD] diffusion/ming: Skip the CUDA-only fused RMSNorm test on ROCm",
+"a": "COLLABORATOR",
+"c": "2026-10-28T17:51:27Z",
+"x": "2026-10-30T04:02:15Z",
+"m": "2026-10-30T04:02:15Z",
+"d": false
+},
+{
+"n": 47116,
+"t": "[Fix] usage: Clamp reasoning tokens after stop truncation",
+"a": "COLLABORATOR",
+"c": "2026-10-28T17:34:34Z",
+"x": "2026-10-29T12:56:10Z",
+"m": "2026-10-29T12:56:09Z",
+"d": false
+},
+{
+"n": 47115,
+"t": "[Perf] moe: Fill padded rows of large narrow buffers with a strided grid",
+"a": "COLLABORATOR",
+"c": "2026-10-28T17:29:12Z",
+"x": "2026-10-29T21:46:24Z",
+"m": "2026-10-29T21:46:24Z",
+"d": false
+},
+{
+"n": 47114,
+"t": "[Fix] rust_server: Record startup-time metrics in Rust mode",
+"a": "COLLABORATOR",
+"c": "2026-10-28T17:28:48Z",
+"x": "2026-10-28T23:24:23Z",
+"m": "2026-10-28T23:24:23Z",
+"d": false
+},
+{
+"n": 47110,
+"t": "[Fix] [AMD] kvcache: Use HIP shared-memory capability attribute",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T17:14:19Z",
+"x": "2026-10-29T18:03:17Z",
+"m": null,
+"d": false
+},
+{
+"n": 47109,
+"t": "[Fix] rust-server: Answer media the multimodal processor refuses with a 400",
+"a": "COLLABORATOR",
+"c": "2026-10-28T17:11:09Z",
+"x": "2026-10-28T18:50:22Z",
+"m": "2026-10-28T18:50:22Z",
+"d": false
+},
+{
+"n": 47108,
+"t": "[Fix] rust-server: Admit a multimodal model's generations only once its MM processor is installed",
+"a": "COLLABORATOR",
+"c": "2026-10-28T17:08:18Z",
+"x": "2026-10-29T17:09:09Z",
+"m": "2026-10-29T17:09:08Z",
+"d": false
+},
+{
+"n": 47107,
+"t": "[Refactor] tokenizer_manager: Move the crash-dump writer into a utils module",
+"a": "COLLABORATOR",
+"c": "2026-10-28T17:01:52Z",
+"x": "2026-10-29T18:01:54Z",
+"m": "2026-10-29T18:01:54Z",
+"d": false
+},
+{
+"n": 47105,
+"t": "[Feat] [NVIDIA] runtime: Add a master switch for megakernel runtime optimizations",
+"a": "COLLABORATOR",
+"c": "2026-10-28T16:56:04Z",
+"x": "2026-10-28T19:19:44Z",
+"m": "2026-10-28T19:19:44Z",
+"d": false
+},
+{
+"n": 47092,
+"t": "[Fix] diffusion: fix colored seams in single-GPU Qwen-Image-2.1-Turbo VAE tiling",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T14:38:54Z",
+"x": "2026-10-29T14:00:50Z",
+"m": "2026-10-29T14:00:50Z",
+"d": false
+},
+{
+"n": 47089,
+"t": "Graph refactor 1028 yy",
+"a": "NONE",
+"c": "2026-10-28T14:19:46Z",
+"x": "2026-10-28T14:20:14Z",
+"m": null,
+"d": false
+},
+{
+"n": 47079,
+"t": "[Fix] dsv4.1: Route image tokens with the VL bias on all-to-all MoE backends",
+"a": "NONE",
+"c": "2026-10-28T12:58:40Z",
+"x": "2026-10-28T17:06:01Z",
+"m": null,
+"d": true
+},
+{
+"n": 47078,
+"t": "[Fix] ci: Repair main after the #39728/#46990 merge race and RUSTSEC-2026-0414",
+"a": "COLLABORATOR",
+"c": "2026-10-28T12:54:43Z",
+"x": "2026-10-28T15:11:21Z",
+"m": "2026-10-28T15:11:21Z",
+"d": false
+},
+{
+"n": 47072,
+"t": "[Feat] scheduler: Add typed per-token and per-request customized_info values",
+"a": "COLLABORATOR",
+"c": "2026-10-28T12:18:38Z",
+"x": "2026-10-29T18:01:34Z",
+"m": "2026-10-29T18:01:34Z",
+"d": false
+},
+{
+"n": 47071,
+"t": "[Fix] mem_cache: support prefix commits in unified MHA views",
+"a": "COLLABORATOR",
+"c": "2026-10-28T12:16:53Z",
+"x": "2026-10-28T12:17:23Z",
+"m": "2026-10-28T12:17:23Z",
+"d": false
+},
+{
+"n": 47063,
+"t": "[Fix] disaggregation: Agree on each decode KV transfer's outcome across PP stages",
+"a": "COLLABORATOR",
+"c": "2026-10-28T11:40:50Z",
+"x": "2026-10-29T10:26:00Z",
+"m": "2026-10-29T10:25:59Z",
+"d": false
+},
+{
+"n": 47062,
+"t": "[Perf] [AMD] attention: Use the AITER FAv3 varlen kernel on gfx942 as well",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T11:39:23Z",
+"x": "2026-10-30T03:55:44Z",
+"m": "2026-10-30T03:55:44Z",
+"d": false
+},
+{
+"n": 47061,
+"t": "[Fix] [NPU] kimi-k3: fix npu fused_sigmoid_gating_delta_rule",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T11:18:53Z",
+"x": "2026-10-29T08:33:01Z",
+"m": "2026-10-29T08:33:01Z",
+"d": false
+},
+{
+"n": 47059,
+"t": "[Fix] sampling: Preserve a byte-length floor for string-stop matching",
+"a": "NONE",
+"c": "2026-10-28T10:29:43Z",
+"x": "2026-10-28T11:10:01Z",
+"m": null,
+"d": false
+},
+{
+"n": 47055,
+"t": "[Feat] diffusion/openai: Cancel video jobs on DELETE",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T10:03:49Z",
+"x": "2026-10-29T08:29:21Z",
+"m": "2026-10-29T08:29:21Z",
+"d": false
+},
+{
+"n": 47054,
+"t": "[Test] [AMD] fp8-grid: Compare the GEMM to aiter within one bf16 rounding, not bitwise",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T09:59:14Z",
+"x": "2026-10-30T06:33:00Z",
+"m": "2026-10-30T06:32:59Z",
+"d": false
+},
+{
+"n": 47045,
+"t": "[Fix] disaggregation: Agree on each prefill KV transfer's outcome across PP stages",
+"a": "COLLABORATOR",
+"c": "2026-10-28T09:31:51Z",
+"x": "2026-10-29T12:22:51Z",
+"m": "2026-10-29T12:22:51Z",
+"d": false
+},
+{
+"n": 47043,
+"t": "【WIP】NPU Graph refactor",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T09:29:23Z",
+"x": "2026-10-29T02:22:04Z",
+"m": null,
+"d": false
+},
+{
+"n": 47041,
+"t": "[Doc] docs: Fix documentation normative issues",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T09:01:01Z",
+"x": "2026-10-29T01:51:53Z",
+"m": "2026-10-29T01:51:53Z",
+"d": false
+},
+{
+"n": 47034,
+"t": "[Feat] [MUSA] breakable: Support portable capture status",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T08:52:45Z",
+"x": "2026-10-29T17:47:36Z",
+"m": "2026-10-29T17:47:36Z",
+"d": false
+},
+{
+"n": 47033,
+"t": "[Perf] dsv41: Read Engram rows in place by default for GPU tables over NVLink",
+"a": "COLLABORATOR",
+"c": "2026-10-28T08:51:51Z",
+"x": "2026-10-28T20:28:47Z",
+"m": "2026-10-28T20:28:47Z",
+"d": false
+},
+{
+"n": 47027,
+"t": "[Doc] cookbook: Drop purged SemiAnalysis AgentX runs and refresh to InferenceX main 253c38bf",
+"a": "COLLABORATOR",
+"c": "2026-10-28T08:37:54Z",
+"x": "2026-10-28T09:12:12Z",
+"m": "2026-10-28T09:12:11Z",
+"d": false
+},
+{
+"n": 47026,
+"t": "Created by mistake",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T08:31:29Z",
+"x": "2026-10-28T08:31:36Z",
+"m": null,
+"d": false
+},
+{
+"n": 47022,
+"t": "[Perf] joy-image: Fuse image MLP GELU on SM120 in high quality",
+"a": "COLLABORATOR",
+"c": "2026-10-28T08:20:30Z",
+"x": "2026-10-29T09:20:44Z",
+"m": "2026-10-29T09:20:44Z",
+"d": false
+},
+{
+"n": 47016,
+"t": "[Fix] rust-server: Read skip_special_tokens on the OpenAI routes and pin per-request detokenization",
+"a": "COLLABORATOR",
+"c": "2026-10-28T07:49:21Z",
+"x": "2026-10-28T12:57:12Z",
+"m": "2026-10-28T12:57:12Z",
+"d": false
+},
+{
+"n": 47015,
+"t": "[Perf] pd: Poll finished KV transfers while the prefill loop waits for a forward result",
+"a": "COLLABORATOR",
+"c": "2026-10-28T07:49:15Z",
+"x": "2026-10-29T18:00:52Z",
+"m": "2026-10-29T18:00:51Z",
+"d": false
+},
+{
+"n": 47008,
+"t": "[Perf] sglang-api-types: Decode flat id lists directly instead of buffering them as Values",
+"a": "COLLABORATOR",
+"c": "2026-10-28T07:20:56Z",
+"x": "2026-10-28T20:00:50Z",
+"m": "2026-10-28T20:00:50Z",
+"d": false
+},
+{
+"n": 47006,
+"t": "[Doc] [AMD] dsv4: Update amd cookbook 1028",
+"a": "COLLABORATOR",
+"c": "2026-10-28T07:16:54Z",
+"x": "2026-10-28T17:58:11Z",
+"m": "2026-10-28T17:58:11Z",
+"d": false
+},
+{
+"n": 46994,
+"t": "[Fix] custom-all-reduce: Keep integer all-reduces off the custom all-reduce kernels",
+"a": "COLLABORATOR",
+"c": "2026-10-28T07:02:35Z",
+"x": "2026-10-28T08:15:29Z",
+"m": "2026-10-28T08:15:28Z",
+"d": false
+},
+{
+"n": 46993,
+"t": "[CI] [NPU] pr-test-npu: Auto-publish coverage baseline with an NPU coverage gate",
+"a": "CONTRIBUTOR",
+"c": "2026-10-28T07:00:57Z",
+"x": "2026-10-28T07:27:04Z",
+"m": "2026-10-28T07:27:04Z",
+"d": false
+},
+{
+"n": 46991,
+"t": "[Refactor] cache: Build prefix-tree components from storage slots",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:43:17Z",
+"x": "2026-10-28T12:04:44Z",
+"m": "2026-10-28T12:04:44Z",
+"d": false
+},
+{
+"n": 46990,
+"t": "[Refactor] attention: Use typed KV views and shared layer routing",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:43:13Z",
+"x": "2026-10-28T12:04:17Z",
+"m": "2026-10-28T12:04:17Z",
+"d": false
+},
+{
+"n": 46989,
+"t": "[Refactor] kv-cache: Share storage interfaces across runtime consumers",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:43:09Z",
+"x": "2026-10-28T12:03:49Z",
+"m": "2026-10-28T12:03:49Z",
+"d": false
+},
+{
+"n": 46988,
+"t": "[Refactor] kv-cache: Centralize request rows and allocation lifecycle",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:43:06Z",
+"x": "2026-10-28T12:03:24Z",
+"m": "2026-10-28T12:03:24Z",
+"d": false
+},
+{
+"n": 46987,
+"t": "[Refactor] kv-cache: Separate byte storage from allocation identities",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:42:52Z",
+"x": "2026-10-28T12:02:47Z",
+"m": "2026-10-28T12:02:46Z",
+"d": false
+},
+{
+"n": 46986,
+"t": "[Refactor] mem-cache: Bind fused drafts to routed KV views",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:42:48Z",
+"x": "2026-10-28T12:02:08Z",
+"m": "2026-10-28T12:02:08Z",
+"d": false
+},
+{
+"n": 46985,
+"t": "[Refactor] mem-cache: Track transfer pins at allocator boundaries",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:42:44Z",
+"x": "2026-10-28T12:01:44Z",
+"m": "2026-10-28T12:01:44Z",
+"d": false
+},
+{
+"n": 46984,
+"t": "[Refactor] mem-cache: Replace unified pool variants with a routed cache",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:42:41Z",
+"x": "2026-10-28T12:01:18Z",
+"m": "2026-10-28T12:01:18Z",
+"d": false
+},
+{
+"n": 46983,
+"t": "[Fix] [AMD] attention: Avoid fused writes to translated window storage",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:42:36Z",
+"x": "2026-10-28T12:00:51Z",
+"m": "2026-10-28T12:00:51Z",
+"d": false
+},
+{
+"n": 46982,
+"t": "[Refactor] mem-cache: Build cache transfers from storage plans",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:42:32Z",
+"x": "2026-10-28T12:00:26Z",
+"m": "2026-10-28T12:00:26Z",
+"d": false
+},
+{
+"n": 46981,
+"t": "[Fix] hicache: Build hybrid recurrent host pools consistently",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:42:03Z",
+"x": "2026-10-28T11:59:59Z",
+"m": "2026-10-28T11:59:59Z",
+"d": false
+},
+{
+"n": 46980,
+"t": "[Refactor] mem-cache: Centralize recurrent state ownership and access",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:41:59Z",
+"x": "2026-10-28T11:59:35Z",
+"m": "2026-10-28T11:59:35Z",
+"d": false
+},
+{
+"n": 46979,
+"t": "[Refactor] mem-cache: Route layer access through KV subpool views",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:41:53Z",
+"x": "2026-10-28T11:59:09Z",
+"m": "2026-10-28T11:59:09Z",
+"d": false
+},
+{
+"n": 46978,
+"t": "[Refactor] mem-cache: Describe KV address translation with ID spaces",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:41:49Z",
+"x": "2026-10-28T11:58:31Z",
+"m": "2026-10-28T11:58:31Z",
+"d": false
+},
+{
+"n": 46977,
+"t": "[Refactor] mem_cache: Centralize unified KV capacity pricing and admission",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:41:45Z",
+"x": "2026-10-28T11:58:07Z",
+"m": "2026-10-28T11:58:07Z",
+"d": false
+},
+{
+"n": 46976,
+"t": "[Refactor] mem_cache: Use one allocator for unified KV sub-pools",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:41:41Z",
+"x": "2026-10-28T11:57:40Z",
+"m": "2026-10-28T11:57:40Z",
+"d": false
+},
+{
+"n": 46975,
+"t": "[Fix] mem_cache: Forward HiCache completion events to recurrent state",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:39:16Z",
+"x": "2026-10-28T11:57:01Z",
+"m": "2026-10-28T11:57:01Z",
+"d": false
+},
+{
+"n": 46974,
+"t": "[Refactor] mem_cache: Build unified KV pools from layer declarations",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:39:13Z",
+"x": "2026-10-28T11:54:44Z",
+"m": "2026-10-28T11:54:44Z",
+"d": false
+},
+{
+"n": 46973,
+"t": "[Refactor] mem_cache: Separate unified KV layout specifications",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:39:09Z",
+"x": "2026-10-28T11:54:09Z",
+"m": "2026-10-28T11:54:09Z",
+"d": false
+},
+{
+"n": 46972,
+"t": "[Fix] mem_cache: Reject unsupported int8 checkpoints with unified memory",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:39:05Z",
+"x": "2026-10-28T11:52:11Z",
+"m": "2026-10-28T11:52:11Z",
+"d": false
+},
+{
+"n": 46971,
+"t": "[Fix] mem_cache: Preserve convolution slice axis in unified hybrid pools",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:39:01Z",
+"x": "2026-10-28T11:51:01Z",
+"m": "2026-10-28T11:51:01Z",
+"d": false
+},
+{
+"n": 46970,
+"t": "[Test] mem_cache: Add unified KV layout and allocator regression coverage",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:38:31Z",
+"x": "2026-10-28T11:49:58Z",
+"m": "2026-10-28T11:49:58Z",
+"d": false
+},
+{
+"n": 46969,
+"t": "[CI] permissions: Grant CI access to AMD Hyperloom and paged-experts contributors",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:36:22Z",
+"x": "2026-10-29T02:30:38Z",
+"m": "2026-10-29T02:30:38Z",
+"d": false
+},
+{
+"n": 46968,
+"t": "[Feat] rust-server: Serve /start_profile and /stop_profile",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:24:49Z",
+"x": "2026-10-29T17:08:58Z",
+"m": "2026-10-29T17:08:58Z",
+"d": false
+},
+{
+"n": 46966,
+"t": "[Doc] [AMD] deepseek-v4: Update MI355X C1 mono-kernel recipe",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:16:29Z",
+"x": "2026-10-28T07:04:18Z",
+"m": "2026-10-28T07:04:18Z",
+"d": false
+},
+{
+"n": 46961,
+"t": "[Feat] rust-server: Report cached tokens by cache tier in native /generate meta_info",
+"a": "COLLABORATOR",
+"c": "2026-10-28T06:00:30Z",
+"x": "2026-10-30T05:02:11Z",
+"m": "2026-10-30T05:02:11Z",
+"d": false
+},
+{
+"n": 46955,
+"t": "[Perf] dsv41: Use the Engram all-to-all lookup for decode and CUDA graphs",
+"a": "COLLABORATOR",
+"c": "2026-10-28T05:49:48Z",
+"x": "2026-10-28T20:25:01Z",
+"m": "2026-10-28T20:25:01Z",
+"d": false
+},
+{
+"n": 46951,
+"t": "[Chore] [AMD] mono-kernel: Bump sgl-amd-mono for MoRI PD decode",
+"a": "COLLABORATOR",
+"c": "2026-10-28T05:40:41Z",
+"x": "2026-10-28T06:05:54Z",
+"m": "2026-10-28T06:05:54Z",
+"d": false
+},
+{
+"n": 46949,
+"t": "[Feat] rust-server: Carry customized_info through the native /generate frontend",
+"a": "COLLABORATOR",
+"c": "2026-10-28T05:36:16Z",
+"x": "2026-10-29T00:41:47Z",
+"m": "2026-10-29T00:41:47Z",
+"d": false
+},
+{
+"n": 46948,
+"t": "[Doc] cookbook: Refresh SemiAnalysis AgentX launches to InferenceX main 67de4b34",
+"a": "COLLABORATOR",
+"c": "2026-10-28T05:33:20Z",
+"x": "2026-10-28T06:12:36Z",
+"m": "2026-10-28T06:12:36Z",
+"d": false
+},
+{
+"n": 46946,
+"t": "[Feat] rust-server: Let a multimodal processor observe the final result before scheduling",
+"a": "COLLABORATOR",
+"c": "2026-10-28T05:30:06Z",
+"x": "2026-10-28T12:51:01Z",
+"m": "2026-10-28T12:51:01Z",
+"d": false
+},
+{
+"n": 46933,
+"t": "[Chore] release: Cherry-pick [Feat] rust_server: Run --sidecar once per node to release/v0.5.23 (#46635)",
+"a": "COLLABORATOR",
+"c": "2026-10-28T04:35:28Z",
+"x": "2026-10-28T04:36:06Z",
+"m": "2026-10-28T04:36:06Z",
+"d": false
+},
+{
+"n": 46925,
+"t": "[Perf] dsv41: Reorder the Engram all-to-all output with a Triton kernel",
+"a": "COLLABORATOR",
+"c": "2026-10-28T03:35:48Z",
+"x": "2026-10-28T05:47:38Z",
+"m": "2026-10-28T05:47:38Z",
+"d": false
+},
+{
+"n": 46917,
+"t": "[Perf] dsv41: Pick the Engram DP lookup collective automatically",
+"a": "COLLABORATOR",
+"c": "2026-10-28T02:11:44Z",
+"x": "2026-10-28T02:58:32Z",
+"m": "2026-10-28T02:58:32Z",
+"d": false
+},
+{
+"n": 46916,
+"t": "[Fix] diffusion/ci: Keep final failure reasons at the end of shard logs",
+"a": "COLLABORATOR",
+"c": "2026-10-28T02:09:56Z",
+"x": "2026-10-28T10:59:57Z",
+"m": "2026-10-28T10:59:57Z",
+"d": false
+},
+{
+"n": 46902,
+"t": "[Chore] [AMD] mono-kernel: Update sgl-amd-mono version",
+"a": "COLLABORATOR",
+"c": "2026-10-28T00:47:10Z",
+"x": "2026-10-28T01:18:32Z",
+"m": "2026-10-28T01:18:32Z",
+"d": false
+},
+{
+"n": 46897,
+"t": "[Fix] dsv4: Let the DSpark draft prep run without host lengths on every device",
+"a": "COLLABORATOR",
+"c": "2026-10-27T23:38:58Z",
+"x": "2026-10-28T01:00:42Z",
+"m": "2026-10-28T01:00:42Z",
+"d": false
+},
+{
+"n": 46896,
+"t": "[Fix] dsv41: Use `--attn-dp-size` in the Engram docs and restore env overrides on exceptions",
+"a": "COLLABORATOR",
+"c": "2026-10-27T23:37:21Z",
+"x": "2026-10-27T23:49:10Z",
+"m": "2026-10-27T23:49:10Z",
+"d": false
+},
+{
+"n": 46895,
+"t": "Revert \"[Doc] beam: Use lmsysorg/sglang:dev image in the cookbook\"",
+"a": "COLLABORATOR",
+"c": "2026-10-27T23:29:31Z",
+"x": "2026-10-27T23:34:43Z",
+"m": "2026-10-27T23:34:42Z",
+"d": false
+},
+{
+"n": 46894,
+"t": "[Fix] lora: Keep per-expert MoE LoRA buffers for experts already wrapped",
+"a": "COLLABORATOR",
+"c": "2026-10-27T23:25:26Z",
+"x": "2026-10-28T00:47:07Z",
+"m": "2026-10-28T00:47:07Z",
+"d": false
+},
+{
+"n": 46893,
+"t": "[Feat] dsv41: Choose where Engram tables live with `--engram-config`",
+"a": "COLLABORATOR",
+"c": "2026-10-27T22:28:11Z",
+"x": "2026-10-27T23:15:20Z",
+"m": "2026-10-27T23:15:20Z",
+"d": false
+},
+{
+"n": 46891,
+"t": "[Fix] dsv4: Build the DSpark draft block metadata without host sequence lengths",
+"a": "COLLABORATOR",
+"c": "2026-10-27T22:10:52Z",
+"x": "2026-10-27T23:19:03Z",
+"m": "2026-10-27T23:19:03Z",
+"d": false
+},
+{
+"n": 46889,
+"t": "[Test] [AMD] diffusion: Compute the VAE blend test's fp16 reference in fp32 on ROCm",
+"a": "COLLABORATOR",
+"c": "2026-10-27T21:34:43Z",
+"x": "2026-10-28T17:23:40Z",
+"m": "2026-10-28T17:23:40Z",
+"d": false
+},
+{
+"n": 46886,
+"t": "[Doc] beam: Use lmsysorg/sglang:dev image in the cookbook",
+"a": "COLLABORATOR",
+"c": "2026-10-27T20:56:37Z",
+"x": "2026-10-27T23:25:35Z",
+"m": "2026-10-27T23:25:34Z",
+"d": false
+},
+{
+"n": 46882,
+"t": "[Feat] grpc: Advertise media inputs in GetServerInfo",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T19:47:43Z",
+"x": "2026-10-29T01:43:03Z",
+"m": "2026-10-29T01:43:03Z",
+"d": false
+},
+{
+"n": 46879,
+"t": "[Fix] rust-server: Report the launched --tokenizer-path from the info endpoints",
+"a": "COLLABORATOR",
+"c": "2026-10-27T19:29:30Z",
+"x": "2026-10-27T20:56:47Z",
+"m": "2026-10-27T20:56:46Z",
+"d": false
+},
+{
+"n": 46875,
+"t": "[CI] [AMD] memory_pool: Keep separate K/V allocations on ROCm to fix Mooncake PD accuracy",
+"a": "COLLABORATOR",
+"c": "2026-10-27T17:57:55Z",
+"x": "2026-10-28T17:24:31Z",
+"m": null,
+"d": false
+},
+{
+"n": 46868,
+"t": "[Feat] minimax-m3.1: Support DSpark on Hopper",
+"a": "COLLABORATOR",
+"c": "2026-10-27T16:17:41Z",
+"x": "2026-10-29T16:40:08Z",
+"m": "2026-10-29T16:40:08Z",
+"d": false
+},
+{
+"n": 46865,
+"t": "[Perf] [AMD] diffusion: Keep the Wan VAE fast path and decode on one rank under multi-GPU, TP2 decode 28.5 -> 9.0 s on gfx1250",
+"a": "COLLABORATOR",
+"c": "2026-10-27T16:03:00Z",
+"x": "2026-10-27T16:25:07Z",
+"m": null,
+"d": false
+},
+{
+"n": 46863,
+"t": "[Feat] jit: Split a header-only module's kernel instantiations across parallel translation units",
+"a": "COLLABORATOR",
+"c": "2026-10-27T16:00:14Z",
+"x": "2026-10-27T20:49:33Z",
+"m": "2026-10-27T20:49:33Z",
+"d": false
+},
+{
+"n": 46861,
+"t": "[Fix] [AMD] memory_pool: Keep K and V in separate allocations on ROCm",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T15:47:12Z",
+"x": "2026-10-28T10:06:16Z",
+"m": "2026-10-28T10:06:16Z",
+"d": false
+},
+{
+"n": 46859,
+"t": "[Doc] cookbook: Add LFM3 cookbook",
+"a": "COLLABORATOR",
+"c": "2026-10-27T15:23:39Z",
+"x": "2026-10-27T16:18:54Z",
+"m": "2026-10-27T16:18:54Z",
+"d": false
+},
+{
+"n": 46856,
+"t": "[Fix] attention: Cover CUDA graph padding in verify state indices",
+"a": "COLLABORATOR",
+"c": "2026-10-27T14:57:53Z",
+"x": "2026-10-29T12:08:16Z",
+"m": null,
+"d": false
+},
+{
+"n": 46853,
+"t": "[Fix] custom-all-reduce: Remove multi-node VMM allocator gate",
+"a": "COLLABORATOR",
+"c": "2026-10-27T14:20:43Z",
+"x": "2026-10-27T14:53:56Z",
+"m": "2026-10-27T14:53:56Z",
+"d": false
+},
+{
+"n": 46851,
+"t": "[Fix] dspark/MiniMax-M3.1-Flash: Inject decode-step draft KV under the draft's TP placement",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T14:09:00Z",
+"x": "2026-10-29T12:13:40Z",
+"m": "2026-10-29T12:13:40Z",
+"d": false
+},
+{
+"n": 46844,
+"t": "[CI] [NPU] precise-test: skip suites that register no PR test",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T13:00:25Z",
+"x": "2026-10-27T13:16:49Z",
+"m": "2026-10-27T13:16:49Z",
+"d": false
+},
+{
+"n": 46840,
+"t": "[Fix] dspark: Keep the real verify accept cost under simulated acceptance",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T12:40:37Z",
+"x": "2026-10-29T05:19:44Z",
+"m": "2026-10-29T05:19:43Z",
+"d": false
+},
+{
+"n": 46835,
+"t": "[Perf] dsv4: Skip the copy when the page-index table is already aligned",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T11:55:20Z",
+"x": "2026-10-28T05:06:40Z",
+"m": "2026-10-28T05:06:40Z",
+"d": false
+},
+{
+"n": 46833,
+"t": "[Fix] [AMD] aiter: Use the layer's softmax scale in MHA prefill and decode",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T11:21:34Z",
+"x": "2026-10-30T06:20:45Z",
+"m": "2026-10-30T06:20:45Z",
+"d": false
+},
+{
+"n": 46832,
+"t": "[Perf] [AMD] qwen3: Use the fused QK-norm + RoPE + KV write in decode with an fp8 KV cache",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T11:21:31Z",
+"x": "2026-10-29T01:49:40Z",
+"m": "2026-10-29T01:49:40Z",
+"d": false
+},
+{
+"n": 46825,
+"t": "[Doc] [AMD] cookbook: Add GLM-5.3 MI355X AgentX recipe",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T11:05:26Z",
+"x": "2026-10-29T01:47:10Z",
+"m": "2026-10-29T01:47:09Z",
+"d": false
+},
+{
+"n": 46821,
+"t": "[Test] HiCache: Don't require a storage hit in the random-failure test",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T10:56:03Z",
+"x": "2026-10-28T05:56:43Z",
+"m": "2026-10-28T05:56:43Z",
+"d": false
+},
+{
+"n": 46812,
+"t": "[Perf] scheduler: Refresh PD prefill bootstrap-queue prefixes in the waiting-prefix LRU pass",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T09:41:19Z",
+"x": "2026-10-28T01:22:38Z",
+"m": "2026-10-28T01:22:38Z",
+"d": false
+},
+{
+"n": 46807,
+"t": "[Doc] cookbook: Refresh SemiAnalysis AgentX launches with DeepSeek-V4 B200 DSpark6 disagg and Muse Spark GB300 points",
+"a": "COLLABORATOR",
+"c": "2026-10-27T09:18:01Z",
+"x": "2026-10-27T11:53:32Z",
+"m": "2026-10-27T11:53:32Z",
+"d": false
+},
+{
+"n": 46805,
+"t": "[Perf] [NPU] dsv4: drop host-syncing ops from the decode scheduler chain (aclnnNonzeroV2 + D2H)",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T09:14:04Z",
+"x": "2026-10-28T11:28:24Z",
+"m": "2026-10-28T11:28:24Z",
+"d": false
+},
+{
+"n": 46800,
+"t": "[Fix] [AMD] quark: Keep MXFP8 shared experts out of the MXFP4 fused slot on dense-first models",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T09:03:20Z",
+"x": "2026-10-30T06:21:05Z",
+"m": "2026-10-30T06:21:05Z",
+"d": false
+},
+{
+"n": 46794,
+"t": "[Feat] [PPU] quantization: Support BF16 DeepGEMM for unquantized linear",
+"a": "NONE",
+"c": "2026-10-27T08:52:14Z",
+"x": "2026-10-27T08:52:55Z",
+"m": null,
+"d": false
+},
+{
+"n": 46792,
+"t": "[Refactor] bcg: Delete capture leftovers and rename `capture_stub` to `on_capture`",
+"a": "COLLABORATOR",
+"c": "2026-10-27T08:44:01Z",
+"x": "2026-10-27T22:05:59Z",
+"m": "2026-10-27T22:05:59Z",
+"d": false
+},
+{
+"n": 46789,
+"t": "[Test] KVShard: Extend HiCache E2E with GLM accuracy coverage",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T08:41:40Z",
+"x": "2026-10-28T12:07:30Z",
+"m": "2026-10-28T12:07:30Z",
+"d": false
+},
+{
+"n": 46785,
+"t": "[CI] [AMD] docker: Build MORI into the ROCm 10.1 gfx1250 image and fix its CI setup",
+"a": "COLLABORATOR",
+"c": "2026-10-27T08:30:12Z",
+"x": "2026-10-27T08:36:20Z",
+"m": "2026-10-27T08:36:20Z",
+"d": false
+},
+{
+"n": 46780,
+"t": "[Feat] rust: Parse DeepSeek-V4/V4.1 output with deepseek-recipe",
+"a": "COLLABORATOR",
+"c": "2026-10-27T08:12:40Z",
+"x": "2026-10-29T07:49:57Z",
+"m": "2026-10-29T07:49:57Z",
+"d": false
+},
+{
+"n": 46777,
+"t": "[Fix] dsv4: Refuse the draft metadata glue when the backend needs host lengths",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T08:03:47Z",
+"x": "2026-10-28T02:24:24Z",
+"m": "2026-10-28T02:24:24Z",
+"d": false
+},
+{
+"n": 46774,
+"t": "[CI] [AMD] deps: Install openai 2.8.0 in AMD CI for the Responses API",
+"a": "COLLABORATOR",
+"c": "2026-10-27T07:59:18Z",
+"x": "2026-10-27T16:53:59Z",
+"m": "2026-10-27T16:53:58Z",
+"d": false
+},
+{
+"n": 46773,
+"t": "Release/2026930",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T07:53:10Z",
+"x": "2026-10-27T07:53:45Z",
+"m": null,
+"d": true
+},
+{
+"n": 46770,
+"t": "[Fix] sgl-kernel: bump sgl-attn to pick up FP8 two-level accumulation",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T07:46:11Z",
+"x": "2026-10-29T02:46:16Z",
+"m": "2026-10-29T02:46:16Z",
+"d": false
+},
+{
+"n": 46769,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 9/9] Expand only the new turn of a multimodal request",
+"a": "COLLABORATOR",
+"c": "2026-10-27T07:44:52Z",
+"x": "2026-10-29T21:22:33Z",
+"m": "2026-10-29T21:22:33Z",
+"d": false
+},
+{
+"n": 46768,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 8/9] Check token-space Qwen output against the legacy processor",
+"a": "COLLABORATOR",
+"c": "2026-10-27T07:44:45Z",
+"x": "2026-10-29T21:22:32Z",
+"m": "2026-10-29T21:22:32Z",
+"d": false
+},
+{
+"n": 46767,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 7/9] Add a token-space strategy for Qwen VL models",
+"a": "COLLABORATOR",
+"c": "2026-10-27T07:44:38Z",
+"x": "2026-10-29T21:22:31Z",
+"m": "2026-10-29T21:22:31Z",
+"d": false
+},
+{
+"n": 46757,
+"t": "[Doc] [AMD] cookbook: Add the Qwen3.5 MI355X FP8 agentic recipe covering the GPU-resident and HiCache bands",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T06:34:18Z",
+"x": "2026-10-28T04:38:57Z",
+"m": "2026-10-28T04:38:57Z",
+"d": false
+},
+{
+"n": 46753,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 6/9] Serve token-space processors behind --enable-token-space-processor",
+"a": "COLLABORATOR",
+"c": "2026-10-27T06:14:07Z",
+"x": "2026-10-29T21:22:29Z",
+"m": "2026-10-29T21:22:29Z",
+"d": false
+},
+{
+"n": 46750,
+"t": "[CI] [AMD] miles-nightly: Split the 8-GPU suite into two jobs",
+"a": "COLLABORATOR",
+"c": "2026-10-27T05:53:30Z",
+"x": "2026-10-28T00:10:09Z",
+"m": "2026-10-28T00:10:09Z",
+"d": false
+},
+{
+"n": 46746,
+"t": "[Feat] nemotron-asr: Nemotron 3.5 ASR (RNN-T) transcription",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T04:43:40Z",
+"x": "2026-10-28T05:15:44Z",
+"m": null,
+"d": false
+},
+{
+"n": 46743,
+"t": "[Perf] LoRA: bound csgmv CUDA-graph segment grids by token count",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T04:21:41Z",
+"x": "2026-10-28T23:12:16Z",
+"m": "2026-10-28T23:12:16Z",
+"d": false
+},
+{
+"n": 46741,
+"t": "[CI] [AMD] docker: Build MORI into the ROCm 10.1 gfx1250 image and fix its CI setup",
+"a": "COLLABORATOR",
+"c": "2026-10-27T04:12:57Z",
+"x": "2026-10-27T08:31:46Z",
+"m": null,
+"d": false
+},
+{
+"n": 46739,
+"t": "[Perf] dflash: Add opt-in compact CUDA graph buckets",
+"a": "NONE",
+"c": "2026-10-27T04:07:00Z",
+"x": "2026-10-29T00:30:02Z",
+"m": null,
+"d": true
+},
+{
+"n": 46737,
+"t": "[Fix] cuda_graph: Release base storage held by empty break inputs",
+"a": "COLLABORATOR",
+"c": "2026-10-27T03:58:09Z",
+"x": "2026-10-29T09:11:38Z",
+"m": "2026-10-29T09:11:38Z",
+"d": false
+},
+{
+"n": 46736,
+"t": "[Doc] [NPU] docs: update npu docs and fix some issues",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T03:47:02Z",
+"x": "2026-10-27T11:52:56Z",
+"m": "2026-10-27T11:52:56Z",
+"d": false
+},
+{
+"n": 46731,
+"t": "[Perf] [AMD] moe: Add tuned Triton fused MoE config for gemma-4-26B-A4B on MI355X",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T03:11:08Z",
+"x": "2026-10-29T01:48:56Z",
+"m": "2026-10-29T01:48:56Z",
+"d": false
+},
+{
+"n": 46729,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 5/9] Add a token-space multimodal processor",
+"a": "COLLABORATOR",
+"c": "2026-10-27T02:56:38Z",
+"x": "2026-10-29T21:22:28Z",
+"m": "2026-10-29T21:22:28Z",
+"d": false
+},
+{
+"n": 46728,
+"t": "[CI] npu: Remove internal cache-service references from NPU workflows",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T02:52:04Z",
+"x": "2026-10-28T07:14:27Z",
+"m": "2026-10-28T07:14:26Z",
+"d": false
+},
+{
+"n": 46723,
+"t": "[Perf] [AMD] diffusion: Replace the gfx1250 bf16 scale-shift torch fallback with a bit-exact Triton kernel",
+"a": "COLLABORATOR",
+"c": "2026-10-27T02:37:15Z",
+"x": "2026-10-29T07:22:51Z",
+"m": "2026-10-29T07:22:51Z",
+"d": false
+},
+{
+"n": 46722,
+"t": "[Perf] [AMD] diffusion: Optimize the Wan VAE decode for gfx1250",
+"a": "COLLABORATOR",
+"c": "2026-10-27T02:37:12Z",
+"x": "2026-10-29T08:44:48Z",
+"m": "2026-10-29T08:44:48Z",
+"d": false
+},
+{
+"n": 46719,
+"t": "[Refactor] bcg: Record graph breaks at capture without running them",
+"a": "COLLABORATOR",
+"c": "2026-10-27T02:28:17Z",
+"x": "2026-10-27T20:53:12Z",
+"m": "2026-10-27T20:53:12Z",
+"d": false
+},
+{
+"n": 46718,
+"t": "[Refactor] dsv4: Set the tail source KV layer id in a capture stub",
+"a": "COLLABORATOR",
+"c": "2026-10-27T02:26:15Z",
+"x": "2026-10-27T04:04:56Z",
+"m": "2026-10-27T04:04:56Z",
+"d": false
+},
+{
+"n": 46709,
+"t": "[Refactor] diffusion/bcg: Share graph-pool output management",
+"a": "COLLABORATOR",
+"c": "2026-10-27T02:09:38Z",
+"x": "2026-10-29T08:32:32Z",
+"m": "2026-10-29T08:32:32Z",
+"d": false
+},
+{
+"n": 46708,
+"t": "[CI] models: Move less-used model tests to extra and nightly suites",
+"a": "COLLABORATOR",
+"c": "2026-10-27T02:06:18Z",
+"x": "2026-10-27T04:59:44Z",
+"m": "2026-10-27T04:59:44Z",
+"d": false
+},
+{
+"n": 46706,
+"t": "[Fix] dsv4: Render null contents, trailing tool-call turns and numeric string efforts with deepseek-recipe",
+"a": "COLLABORATOR",
+"c": "2026-10-27T01:35:39Z",
+"x": "2026-10-27T07:59:01Z",
+"m": "2026-10-27T07:59:01Z",
+"d": false
+},
+{
+"n": 46705,
+"t": "[Perf] diffusion/ming: Reuse ordered RMSNorm in the DiT",
+"a": "COLLABORATOR",
+"c": "2026-10-27T01:24:25Z",
+"x": "2026-10-28T02:47:50Z",
+"m": "2026-10-28T02:47:50Z",
+"d": false
+},
+{
+"n": 46704,
+"t": "[Fix] mem_cache: Match KV budgets to indexer, DCP and replay layouts",
+"a": "COLLABORATOR",
+"c": "2026-10-27T01:21:53Z",
+"x": "2026-10-27T05:40:43Z",
+"m": null,
+"d": false
+},
+{
+"n": 46703,
+"t": "[CI] [AMD] install: Cache the AOT kernel wheel and stop wiping venv bytecode",
+"a": "COLLABORATOR",
+"c": "2026-10-27T01:04:41Z",
+"x": "2026-10-28T14:12:39Z",
+"m": "2026-10-28T14:12:39Z",
+"d": false
+},
+{
+"n": 46701,
+"t": "[Fix] FlashInfer: Tune one prefill shape during MoE startup",
+"a": "CONTRIBUTOR",
+"c": "2026-10-27T00:59:56Z",
+"x": "2026-10-28T08:19:21Z",
+"m": null,
+"d": false
+},
+{
+"n": 46700,
+"t": "[Fix] mem_cache: Clamp SWA tombstone recovery to the request's protected prefix",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:54:44Z",
+"x": "2026-10-27T18:46:41Z",
+"m": "2026-10-27T18:46:41Z",
+"d": false
+},
+{
+"n": 46699,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 4/9] Split feature transport and preprocessing placement out of the base processor",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:46:39Z",
+"x": "2026-10-29T21:22:27Z",
+"m": "2026-10-29T21:22:27Z",
+"d": false
+},
+{
+"n": 46696,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 3/9] Extract a shared multimodal processor mixin",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:38:50Z",
+"x": "2026-10-29T21:22:25Z",
+"m": "2026-10-29T21:22:25Z",
+"d": false
+},
+{
+"n": 46695,
+"t": "[Refactor] attention: Route every FlashAttention call through the selected kernel",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:36:46Z",
+"x": "2026-10-28T00:11:59Z",
+"m": "2026-10-28T00:11:58Z",
+"d": false
+},
+{
+"n": 46689,
+"t": "[Perf] disaggregation: Restore host-received decode KV without blocking the scheduler",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:27:41Z",
+"x": "2026-10-27T18:46:34Z",
+"m": "2026-10-27T18:46:34Z",
+"d": false
+},
+{
+"n": 46686,
+"t": "[CI] [AMD] diffusion: Skip the CUDA-only Nomas fused-kernel and FlexAttention unit tests on ROCm",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:23:37Z",
+"x": "2026-10-27T16:37:55Z",
+"m": "2026-10-27T16:37:55Z",
+"d": false
+},
+{
+"n": 46684,
+"t": "[Fix] dsv41: Size compressed KV pools from the allocated layout",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:18:11Z",
+"x": "2026-10-27T00:56:22Z",
+"m": null,
+"d": false
+},
+{
+"n": 46682,
+"t": "[Fix] distributed: Probe the TP group's node span on the first multimem all-gather",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:15:23Z",
+"x": "2026-10-27T22:10:42Z",
+"m": "2026-10-27T22:10:42Z",
+"d": false
+},
+{
+"n": 46681,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 2/9] Initialize multimodal processors from a processor config",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:14:39Z",
+"x": "2026-10-29T21:22:24Z",
+"m": "2026-10-29T21:22:24Z",
+"d": false
+},
+{
+"n": 46680,
+"t": "[Refactor] multimodal: [sglang-miles] [MM refactor 1/9] Move multimodal enums to a shared module",
+"a": "COLLABORATOR",
+"c": "2026-10-27T00:09:51Z",
+"x": "2026-10-29T21:22:23Z",
+"m": "2026-10-29T21:22:23Z",
+"d": false
+},
+{
+"n": 46679,
+"t": "[Fix] diffusion: Resolve cached named weights without the Hub API",
+"a": "COLLABORATOR",
+"c": "2026-10-26T23:50:39Z",
+"x": "2026-10-27T00:07:07Z",
+"m": "2026-10-27T00:07:07Z",
+"d": false
+},
+{
+"n": 46677,
+"t": "[Perf] [AMD] dsv4.1: Wire up 32x32-block fp8 wo_a GEMM",
+"a": "COLLABORATOR",
+"c": "2026-10-26T23:13:29Z",
+"x": "2026-10-30T06:41:39Z",
+"m": "2026-10-30T06:41:39Z",
+"d": false
+},
+{
+"n": 46676,
+"t": "[Fix] dsv4: Keep a coordinated verify rank out of the decoder-tail idle replay",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T23:07:47Z",
+"x": "2026-10-30T06:42:25Z",
+"m": "2026-10-30T06:42:25Z",
+"d": false
+},
+{
+"n": 46674,
+"t": "[Perf] radix-tree: Keep the GIL for tree-core flag, size and digest reads unless the core is busy",
+"a": "COLLABORATOR",
+"c": "2026-10-26T22:41:30Z",
+"x": "2026-10-27T18:46:28Z",
+"m": "2026-10-27T18:46:28Z",
+"d": false
+},
+{
+"n": 46671,
+"t": "[Fix] dsv4.1: capture routed experts on the vision-aware routing path",
+"a": "COLLABORATOR",
+"c": "2026-10-26T22:02:10Z",
+"x": "2026-10-27T00:06:51Z",
+"m": "2026-10-27T00:06:51Z",
+"d": false
+},
+{
+"n": 46668,
+"t": "[Doc] sgl-router: Add GLM-5.3-Flash and DeepSeek-V4.1-Flash deployment examples",
+"a": "COLLABORATOR",
+"c": "2026-10-26T21:28:33Z",
+"x": "2026-10-26T21:57:18Z",
+"m": "2026-10-26T21:57:18Z",
+"d": false
+},
+{
+"n": 46664,
+"t": "[Fix] diffusion/moss: Preserve full latents for sequence parallelism",
+"a": "COLLABORATOR",
+"c": "2026-10-26T21:10:43Z",
+"x": "2026-10-28T02:25:35Z",
+"m": "2026-10-28T02:25:35Z",
+"d": false
+},
+{
+"n": 46660,
+"t": "[Refactor] diffusion: Write MiniMax-H3 and Qwen-Image 2.1 break outputs into caller-allocated buffers",
+"a": "COLLABORATOR",
+"c": "2026-10-26T20:51:32Z",
+"x": "2026-10-27T01:23:26Z",
+"m": "2026-10-27T01:23:26Z",
+"d": false
+},
+{
+"n": 46659,
+"t": "[Refactor] diffusion: Write DiT attention break outputs into caller-allocated buffers",
+"a": "COLLABORATOR",
+"c": "2026-10-26T20:51:22Z",
+"x": "2026-10-27T01:23:38Z",
+"m": "2026-10-27T01:23:38Z",
+"d": false
+},
+{
+"n": 46658,
+"t": "[Fix] elementwise: Avoid data-dependent token-count guards in sigmoid-mul launchers",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T20:22:29Z",
+"x": "2026-10-27T05:12:51Z",
+"m": "2026-10-27T05:12:51Z",
+"d": false
+},
+{
+"n": 46641,
+"t": "[Perf] MOSS-Image: Fuse joint-block QKV projections in high quality",
+"a": "COLLABORATOR",
+"c": "2026-10-26T19:55:24Z",
+"x": "2026-10-28T01:42:05Z",
+"m": "2026-10-28T01:42:05Z",
+"d": false
+},
+{
+"n": 46640,
+"t": "[Fix] utils: Fix CPU engine detection under torch.compile fullgraph",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T19:50:25Z",
+"x": "2026-10-26T20:32:29Z",
+"m": "2026-10-26T20:32:29Z",
+"d": false
+},
+{
+"n": 46639,
+"t": "[Perf] speculative: Rotate multi-layer EAGLE prefill input_ids 4096 ids per trip, not 8",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T19:41:38Z",
+"x": "2026-10-28T10:20:41Z",
+"m": "2026-10-28T10:20:41Z",
+"d": false
+},
+{
+"n": 46638,
+"t": "[Fix] multimodal: Clip pad spans to a truncated prompt",
+"a": "COLLABORATOR",
+"c": "2026-10-26T19:38:15Z",
+"x": "2026-10-27T00:53:35Z",
+"m": "2026-10-27T00:53:35Z",
+"d": false
+},
+{
+"n": 46635,
+"t": "[Feat] rust_server: Run --sidecar once per node",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T19:37:03Z",
+"x": "2026-10-28T02:54:26Z",
+"m": "2026-10-28T02:54:26Z",
+"d": false
+},
+{
+"n": 46634,
+"t": "[Fix] [MUSA] fa3: Compute scheduler metadata from the calling backend",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T19:06:13Z",
+"x": "2026-10-27T05:01:13Z",
+"m": null,
+"d": false
+},
+{
+"n": 46629,
+"t": "[Test] rust-server: Drop two unit tests that mirror one-line delegations",
+"a": "COLLABORATOR",
+"c": "2026-10-26T18:00:06Z",
+"x": "2026-10-27T18:46:23Z",
+"m": "2026-10-27T18:46:23Z",
+"d": false
+},
+{
+"n": 46627,
+"t": "[Test] minimax-m3.1: Add nightly e2e tests on H200 and B300",
+"a": "COLLABORATOR",
+"c": "2026-10-26T16:49:24Z",
+"x": "2026-10-30T03:42:36Z",
+"m": "2026-10-30T03:42:36Z",
+"d": false
+},
+{
+"n": 46625,
+"t": "[Fix] kernel-plugins: Serve the MSA plugin behind --enable-nvidia-megakernel",
+"a": "COLLABORATOR",
+"c": "2026-10-26T16:47:43Z",
+"x": "2026-10-29T03:28:14Z",
+"m": "2026-10-29T03:28:14Z",
+"d": false
+},
+{
+"n": 46623,
+"t": "[Feat] xpu: Consolidate simple XPU enablements",
+"a": "COLLABORATOR",
+"c": "2026-10-26T16:30:56Z",
+"x": "2026-10-30T02:25:45Z",
+"m": "2026-10-30T02:25:45Z",
+"d": false
+},
+{
+"n": 46620,
+"t": "[Fix] startup: remove TorchScript deprecations at their sources",
+"a": "COLLABORATOR",
+"c": "2026-10-26T16:24:17Z",
+"x": "2026-10-27T07:39:48Z",
+"m": "2026-10-27T07:39:48Z",
+"d": false
+},
+{
+"n": 46618,
+"t": "[Fix] dspark: Avoid host reads during draft metadata glue capture",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T16:06:47Z",
+"x": "2026-10-28T01:28:27Z",
+"m": null,
+"d": false
+},
+{
+"n": 46605,
+"t": "[Fix] [XPU] docker: install oneCCL 2022.1.2 graph-mode runtime set",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T14:46:40Z",
+"x": "2026-10-27T06:54:10Z",
+"m": null,
+"d": false
+},
+{
+"n": 46601,
+"t": "[Fix] diffusion: LingBot QKV sharing, causal RoPE on no-cache path, uneven split guard",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T13:54:24Z",
+"x": "2026-10-30T00:31:57Z",
+"m": "2026-10-30T00:31:57Z",
+"d": false
+},
+{
+"n": 46600,
+"t": "[Fix] diffusion: HunyuanImage-3 MoE shared MLP and timestep schedule on CUDA",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T13:45:16Z",
+"x": "2026-10-27T19:34:47Z",
+"m": "2026-10-27T19:34:47Z",
+"d": false
+},
+{
+"n": 46594,
+"t": "[Fix] kda: Honor state and replay dtype",
+"a": "COLLABORATOR",
+"c": "2026-10-26T12:20:13Z",
+"x": "2026-10-29T02:44:39Z",
+"m": null,
+"d": false
+},
+{
+"n": 46592,
+"t": "[Fix] eplb: Warm default-group P2P transports on multi-node layouts",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T12:14:34Z",
+"x": "2026-10-29T18:45:28Z",
+"m": "2026-10-29T18:45:28Z",
+"d": false
+},
+{
+"n": 46570,
+"t": "[Test] hicache: Accept session_ids in the L3 object-layout test's put stubs",
+"a": "COLLABORATOR",
+"c": "2026-10-26T09:34:35Z",
+"x": "2026-10-26T09:43:43Z",
+"m": "2026-10-26T09:43:43Z",
+"d": false
+},
+{
+"n": 46567,
+"t": "[Perf] paged-experts: fewer host syncs in host-planned steps",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T09:22:35Z",
+"x": "2026-10-27T19:36:12Z",
+"m": "2026-10-27T19:36:12Z",
+"d": false
+},
+{
+"n": 46561,
+"t": "[CI] [NPU] registry: Downsize nightly test registrations to the cards each test actually uses",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T08:57:54Z",
+"x": "2026-10-26T10:32:00Z",
+"m": "2026-10-26T10:32:00Z",
+"d": false
+},
+{
+"n": 46558,
+"t": "[CI] [NPU] workflow: Fix indentation of branches filter in pr-test-npu.yml",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T08:43:09Z",
+"x": "2026-10-26T09:02:59Z",
+"m": "2026-10-26T09:02:59Z",
+"d": false
+},
+{
+"n": 46553,
+"t": "[Refactor] bcg: Write the debug-mode forward's output buffer inside its eager break",
+"a": "COLLABORATOR",
+"c": "2026-10-26T08:29:58Z",
+"x": "2026-10-26T20:44:30Z",
+"m": "2026-10-26T20:44:30Z",
+"d": false
+},
+{
+"n": 46551,
+"t": "[Refactor] nemotron_h: Read the prefill shared expert's output from the caller's holder",
+"a": "COLLABORATOR",
+"c": "2026-10-26T08:20:47Z",
+"x": "2026-10-26T20:40:24Z",
+"m": "2026-10-26T20:40:24Z",
+"d": false
+},
+{
+"n": 46547,
+"t": "[Doc] cookbook: Refresh SemiAnalysis AgentX launches with MiniMax-M3.1-Flash B200 / GB200 HiCache points",
+"a": "COLLABORATOR",
+"c": "2026-10-26T08:13:49Z",
+"x": "2026-10-26T08:36:16Z",
+"m": "2026-10-26T08:36:16Z",
+"d": false
+},
+{
+"n": 46546,
+"t": "[Doc] cookbook: MiniMax-M3.1 GB200 recipes and B200 Low-Latency (MonoKernel)",
+"a": "COLLABORATOR",
+"c": "2026-10-26T08:05:55Z",
+"x": "2026-10-26T08:20:44Z",
+"m": "2026-10-26T08:20:44Z",
+"d": false
+},
+{
+"n": 46543,
+"t": "[Refactor] qwen4: Write QSA top-k and PLE batch breaks into caller-held outputs",
+"a": "COLLABORATOR",
+"c": "2026-10-26T07:52:40Z",
+"x": "2026-10-26T20:34:29Z",
+"m": "2026-10-26T20:34:29Z",
+"d": false
+},
+{
+"n": 46536,
+"t": "[Fix] diffusion: Guard CUDA-only RoPE paths",
+"a": "COLLABORATOR",
+"c": "2026-10-26T07:24:40Z",
+"x": "2026-10-27T06:50:16Z",
+"m": "2026-10-27T06:50:16Z",
+"d": false
+},
+{
+"n": 46535,
+"t": "[Refactor] attention: Write the eager break's LSE into a caller-allocated buffer",
+"a": "COLLABORATOR",
+"c": "2026-10-26T07:13:48Z",
+"x": "2026-10-26T20:39:48Z",
+"m": "2026-10-26T20:39:48Z",
+"d": false
+},
+{
+"n": 46533,
+"t": "[CI] deepep: Add release workflow for sgl-deep-ep-v25 (DeepEP 2.5)",
+"a": "COLLABORATOR",
+"c": "2026-10-26T07:06:37Z",
+"x": "2026-10-26T07:17:57Z",
+"m": "2026-10-26T07:17:57Z",
+"d": false
+},
+{
+"n": 46531,
+"t": "[CI] [NPU] Add temporary nightly jobs to validate NPU test card counts",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T07:00:44Z",
+"x": "2026-10-26T11:36:04Z",
+"m": null,
+"d": false
+},
+{
+"n": 46530,
+"t": "[Refactor] dsv41: Write engram hash ids and embeddings into caller-allocated prefill graph outputs",
+"a": "COLLABORATOR",
+"c": "2026-10-26T06:55:44Z",
+"x": "2026-10-26T07:27:44Z",
+"m": "2026-10-26T07:27:44Z",
+"d": false
+},
+{
+"n": 46528,
+"t": "[Fix] [AMD] aiter: Fix garbage output with an fp8 KV cache and calibrated KV scales",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T06:42:11Z",
+"x": "2026-10-27T06:31:49Z",
+"m": "2026-10-27T06:31:49Z",
+"d": false
+},
+{
+"n": 46526,
+"t": "[Refactor] dsv4: Pass tail metadata to enter_late_layer_tail",
+"a": "COLLABORATOR",
+"c": "2026-10-26T06:34:25Z",
+"x": "2026-10-27T23:58:49Z",
+"m": null,
+"d": false
+},
+{
+"n": 46524,
+"t": "[Fix] attention: Register the MSA-v1 Q8KV4 kill switch in the env registry",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T06:13:19Z",
+"x": "2026-10-27T07:00:52Z",
+"m": null,
+"d": false
+},
+{
+"n": 46516,
+"t": "[Refactor] dsv4: Write the replay tail's outputs into caller-held prefill graph bridges",
+"a": "COLLABORATOR",
+"c": "2026-10-26T05:47:50Z",
+"x": "2026-10-26T06:52:06Z",
+"m": "2026-10-26T06:52:06Z",
+"d": false
+},
+{
+"n": 46513,
+"t": "[Fix] rust-server: End a native /generate stream on a scheduler abort frame, as Python does",
+"a": "COLLABORATOR",
+"c": "2026-10-26T05:42:24Z",
+"x": "2026-10-28T00:53:20Z",
+"m": "2026-10-28T00:53:20Z",
+"d": false
+},
+{
+"n": 46510,
+"t": "[CI] rerun: Register the Mooncake test group",
+"a": "COLLABORATOR",
+"c": "2026-10-26T05:33:11Z",
+"x": "2026-10-27T03:35:21Z",
+"m": "2026-10-27T03:35:21Z",
+"d": false
+},
+{
+"n": 46506,
+"t": "[Doc] cookbook: Add MiniMax-M3.1-Flash AgentX launches and refresh with nine InferenceX PRs",
+"a": "COLLABORATOR",
+"c": "2026-10-26T04:35:42Z",
+"x": "2026-10-26T05:04:00Z",
+"m": "2026-10-26T05:04:00Z",
+"d": false
+},
+{
+"n": 46505,
+"t": "[Feat] sgl-router: Confirmed-first pending prefixes for cold prompts, with a follower cap",
+"a": "COLLABORATOR",
+"c": "2026-10-26T03:58:33Z",
+"x": "2026-10-26T07:15:31Z",
+"m": "2026-10-26T07:15:30Z",
+"d": false
+},
+{
+"n": 46501,
+"t": "[Fix] hicache: Delegate on_host_pools_registered in the failure injector",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T03:31:00Z",
+"x": "2026-10-26T09:02:12Z",
+"m": "2026-10-26T09:02:12Z",
+"d": false
+},
+{
+"n": 46500,
+"t": "[Feat] LoRA: revamp LoRADrainer for better performance",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T03:27:55Z",
+"x": "2026-10-29T20:42:45Z",
+"m": "2026-10-29T20:42:45Z",
+"d": false
+},
+{
+"n": 46497,
+"t": "[Perf] eplb: Fuse expert-count recording into one kernel on CUDA decode graphs",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T02:50:42Z",
+"x": "2026-10-27T22:28:45Z",
+"m": "2026-10-27T22:28:45Z",
+"d": false
+},
+{
+"n": 46493,
+"t": "[Perf] diffusion/worker: Move cyclic GC out of request execution",
+"a": "COLLABORATOR",
+"c": "2026-10-26T02:27:10Z",
+"x": "2026-10-26T07:18:45Z",
+"m": "2026-10-26T07:18:45Z",
+"d": false
+},
+{
+"n": 46490,
+"t": "[Doc] Cookbook: update GB300 DSV4.1 agg AgentX launches from InferenceX #4434",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T02:18:22Z",
+"x": "2026-10-26T06:09:48Z",
+"m": null,
+"d": false
+},
+{
+"n": 46489,
+"t": "Sgl project main",
+"a": "CONTRIBUTOR",
+"c": "2026-10-26T02:04:03Z",
+"x": "2026-10-26T02:04:15Z",
+"m": null,
+"d": false
+},
+{
+"n": 46481,
+"t": "[Chore] ci: Update test est_time values",
+"a": "MEMBER",
+"c": "2026-10-26T00:43:08Z",
+"x": "2026-10-26T11:24:15Z",
+"m": "2026-10-26T11:24:15Z",
+"d": false
+},
+{
+"n": 46479,
+"t": "[Feat] [NVIDIA] megakernels: Expose fixed-width Kimi K3 DSpark verification state",
+"a": "COLLABORATOR",
+"c": "2026-10-26T00:11:43Z",
+"x": "2026-10-26T14:45:30Z",
+"m": null,
+"d": true
+},
+{
+"n": 46473,
+"t": "[Perf] [NVIDIA] kimi-k3: Low-latency SM107 path, prepared FP4 routing metadata and fused route preparation",
+"a": "COLLABORATOR",
+"c": "2026-10-25T22:02:27Z",
+"x": "2026-10-25T23:25:03Z",
+"m": null,
+"d": false
+},
+{
+"n": 46468,
+"t": "[Perf] [NVIDIA] kimi-k3: Route draft/dense bf16 GEMMs to TGV and narrow the MLA output gate vector",
+"a": "COLLABORATOR",
+"c": "2026-10-25T21:02:12Z",
+"x": "2026-10-26T06:41:01Z",
+"m": "2026-10-26T06:41:01Z",
+"d": false
+},
+{
+"n": 46465,
+"t": "[Perf] [NVIDIA] kda: Narrower V tiles for the KDA spec-verify recurrence on SM107",
+"a": "COLLABORATOR",
+"c": "2026-10-25T20:25:00Z",
+"x": "2026-10-25T20:38:45Z",
+"m": "2026-10-25T20:38:45Z",
+"d": false
+},
+{
+"n": 46464,
+"t": "[Perf] [NVIDIA] kimi-k3: FP32 warp split-K GEMM for the MoE front projection on SM107",
+"a": "COLLABORATOR",
+"c": "2026-10-25T20:23:13Z",
+"x": "2026-10-25T22:25:33Z",
+"m": "2026-10-25T22:25:32Z",
+"d": false
+},
+{
+"n": 46463,
+"t": "[Fix] [NVIDIA] dist: Detect MNNVL fabric devices by NVML fabric state, not only by GB200/GB300 name",
+"a": "COLLABORATOR",
+"c": "2026-10-25T20:23:10Z",
+"x": "2026-10-25T20:40:29Z",
+"m": "2026-10-25T20:40:29Z",
+"d": false
+},
+{
+"n": 46458,
+"t": "[Perf] paged-experts: fewer host syncs in host-planned steps",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T18:39:36Z",
+"x": "2026-10-26T07:04:06Z",
+"m": null,
+"d": false
+},
+{
+"n": 46457,
+"t": "[Perf] paged-experts: fuse slot lookup into decide",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T18:38:58Z",
+"x": "2026-10-27T10:38:59Z",
+"m": "2026-10-27T10:38:59Z",
+"d": false
+},
+{
+"n": 46456,
+"t": "[Perf] paged-experts: exact size pinning",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T18:37:30Z",
+"x": "2026-10-30T00:32:20Z",
+"m": "2026-10-30T00:32:20Z",
+"d": false
+},
+{
+"n": 46453,
+"t": "[CI] [AMD] pr-test: list tags with ls-remote, 8 small shards",
+"a": "COLLABORATOR",
+"c": "2026-10-25T17:16:15Z",
+"x": "2026-10-26T09:08:50Z",
+"m": "2026-10-26T09:08:50Z",
+"d": false
+},
+{
+"n": 46449,
+"t": "[CI] [AMD] diffusion: Skip the CUDA-only gpu-idle and Z-Image RoPE cache unit tests on ROCm",
+"a": "COLLABORATOR",
+"c": "2026-10-25T16:33:39Z",
+"x": "2026-10-26T19:23:48Z",
+"m": "2026-10-26T19:23:48Z",
+"d": false
+},
+{
+"n": 46442,
+"t": "[Fix] unified-memory: Name the draft KV dtype flag in the fused-region mismatch error",
+"a": "COLLABORATOR",
+"c": "2026-10-25T15:34:55Z",
+"x": "2026-10-25T16:47:25Z",
+"m": "2026-10-25T16:47:25Z",
+"d": false
+},
+{
+"n": 46441,
+"t": "[Fix] mlx: Accept draft_parallel_layout in the stub's alloc_memory_pool",
+"a": "COLLABORATOR",
+"c": "2026-10-25T15:34:53Z",
+"x": "2026-10-25T16:52:30Z",
+"m": "2026-10-25T16:52:30Z",
+"d": false
+},
+{
+"n": 46440,
+"t": "[Chore] codeowners: Add paged experts maintainers",
+"a": "COLLABORATOR",
+"c": "2026-10-25T15:30:25Z",
+"x": "2026-10-28T05:59:35Z",
+"m": "2026-10-28T05:59:35Z",
+"d": false
+},
+{
+"n": 46433,
+"t": "[Fix] speculative: Preserve NaN argmax semantics in DSpark kernels",
+"a": "NONE",
+"c": "2026-10-25T14:27:04Z",
+"x": "2026-10-25T14:48:46Z",
+"m": null,
+"d": false
+},
+{
+"n": 46432,
+"t": "[Chore] sgl-router: use `api.v1` typed generate response",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T14:07:46Z",
+"x": "2026-10-26T07:56:34Z",
+"m": "2026-10-26T07:56:34Z",
+"d": false
+},
+{
+"n": 46424,
+"t": "[Fix] dsa: Preserve token-first sparse attention outputs",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T11:09:34Z",
+"x": "2026-10-27T08:29:53Z",
+"m": "2026-10-27T08:29:53Z",
+"d": false
+},
+{
+"n": 46423,
+"t": "[Feat] disaggregation: Verify the KV checksum under a decode-side radix cache",
+"a": "COLLABORATOR",
+"c": "2026-10-25T10:40:10Z",
+"x": "2026-10-25T17:51:23Z",
+"m": "2026-10-25T17:51:23Z",
+"d": false
+},
+{
+"n": 46417,
+"t": "[Fix] [Intel] dp-attention: Skip the CustomAllReduceV2 import on XPU",
+"a": "COLLABORATOR",
+"c": "2026-10-25T09:26:16Z",
+"x": "2026-10-26T04:41:26Z",
+"m": "2026-10-26T04:41:26Z",
+"d": false
+},
+{
+"n": 46404,
+"t": "[Fix] dspark: Draw the simulated-acceptance bonus at the simulated row",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T09:02:21Z",
+"x": "2026-10-27T08:48:21Z",
+"m": "2026-10-27T08:48:21Z",
+"d": false
+},
+{
+"n": 46399,
+"t": "[Refactor] dsv41: Write the candidate table into caller-held prefill graph buffers",
+"a": "COLLABORATOR",
+"c": "2026-10-25T07:19:17Z",
+"x": "2026-10-26T05:45:22Z",
+"m": "2026-10-26T05:45:22Z",
+"d": false
+},
+{
+"n": 46396,
+"t": "[CI] [AMD] diffusion: Skip the Wan CuTe DSL q/k norm RoPE imports on ROCm",
+"a": "COLLABORATOR",
+"c": "2026-10-25T07:06:30Z",
+"x": "2026-10-26T19:16:05Z",
+"m": "2026-10-26T19:16:05Z",
+"d": false
+},
+{
+"n": 46393,
+"t": "[Fix] [Intel] diffusion/wan: Guard the CuTe DSL q/k norm RoPE imports on XPU",
+"a": "COLLABORATOR",
+"c": "2026-10-25T06:45:51Z",
+"x": "2026-10-26T12:08:26Z",
+"m": "2026-10-26T12:08:25Z",
+"d": false
+},
+{
+"n": 46388,
+"t": "[Refactor] linker: Use dedicated configuration throughout linker setup",
+"a": "COLLABORATOR",
+"c": "2026-10-25T06:13:48Z",
+"x": "2026-10-25T14:50:48Z",
+"m": "2026-10-25T14:50:48Z",
+"d": false
+},
+{
+"n": 46382,
+"t": "[Feat] unified-memory: Fuse MLA drafts on flashmla, trtllm_mla and cutedsl_mla",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T06:02:49Z",
+"x": "2026-10-29T20:37:00Z",
+"m": null,
+"d": false
+},
+{
+"n": 46380,
+"t": "[Feat] unified-memory: Admit DSPARK on trtllm_mha",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T06:02:40Z",
+"x": "2026-10-29T20:36:57Z",
+"m": null,
+"d": false
+},
+{
+"n": 46379,
+"t": "[Feat] unified-memory: Admit fa4 for EAGLE and DFLASH",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T06:02:36Z",
+"x": "2026-10-29T20:36:53Z",
+"m": null,
+"d": false
+},
+{
+"n": 46378,
+"t": "[Feat] unified-memory: Fuse sliding-window draft layers on fa3",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T06:02:32Z",
+"x": "2026-10-29T20:36:50Z",
+"m": null,
+"d": false
+},
+{
+"n": 46377,
+"t": "[Fix] unified-memory: Match the fused draft's KV dtype refusal in its gate test",
+"a": "CONTRIBUTOR",
+"c": "2026-10-25T06:02:28Z",
+"x": "2026-10-25T21:37:32Z",
+"m": null,
+"d": false
+},
+{
+"n": 46366,
+"t": "[Perf] [AMD] diffusion: Route large BF16 linears to the FlyDSL a16w16 GEMM on gfx1250",
+"a": "COLLABORATOR",
+"c": "2026-10-25T04:25:05Z",
+"x": "2026-10-27T07:32:50Z",
+"m": "2026-10-27T07:32:50Z",
+"d": false
+}
+]

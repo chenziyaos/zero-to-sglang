@@ -1,0 +1,1 @@
+{"name": "DeepInfer 侧", "prefill_window": "GPU0 上约 9 个 batch", "prefill_unique_prompts": false, "engram_placement": "cpu", "draft_redundant_experts": 64}
