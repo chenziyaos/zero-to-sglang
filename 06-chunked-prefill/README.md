@@ -1,5 +1,7 @@
 # SGL-06 Chunked prefill
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/06-chunked-prefill.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-06｜原理｜Chunked prefill：切块大小、mixed chunk 与 TTFT / ITL 的取舍。
 
 验证基线：sglang 主干 `8fabf5e`。脚本只用标准库，CPU 上能跑，单步耗时复用 `../03-bench/sim_serve.py` 的 Roofline 模型，KV 池容量复用 `../02-ledger/sim_ledger.py`，GPU 分档复用 `../01-first-server/estimate_startup.py`，显存预留复刻 `memory_hook.py` 的公式。

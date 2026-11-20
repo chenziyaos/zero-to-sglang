@@ -1,5 +1,7 @@
 # SGL-20 读新 PR 与提 PR 的工具
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/20-contrib.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-20｜前沿｜42 天主干复盘：缓存寻址、PD 状态与投机解码的组合边界。文档按“原来卡在哪、引入了什么机制、代价落在哪”读主干的新改动；本目录的脚本用来在本地克隆里定位这些改动涉及的符号、自查自己的 PR。
 
 验证基线：sglang 主干 `8fabf5e`。脚本只用标准库（`find_symbol.sh` 只用 grep），不依赖 GPU、torch 和 sglang 本体；`plan --repo`、`find_symbol.sh` 需要一份本地 sglang 克隆。
@@ -55,7 +57,7 @@ python3 check_pr.py plan ... --codeowners .github/CODEOWNERS
 上游补丁的单测要在 sglang 开发环境里跑（`pip install -e "python"` 之后）：
 
 ```bash
-cd sglang && git apply ../ai_infra/zero-to-sglang/20-contrib/upstream/utilization_fix.patch
+cd sglang && git apply ../zero-to-sglang/20-contrib/upstream/utilization_fix.patch
 pytest test/registered/unit/managers/scheduler_components/test_metrics_reporter.py -v
 ```
 

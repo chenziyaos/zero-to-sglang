@@ -1,5 +1,7 @@
 # SGL-02 推理账本
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/02-ledger.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-02｜上手｜推理账本：显存、KV 与 Roofline。
 
 验证基线：sglang 主干 `8fabf5e`。两个脚本都只用标准库，CPU 上能跑。模型结构和 GPU 规格从 `../common/specs.py` 读，启发式（chunk 档位、decode max_bs）复用 `../01-first-server/estimate_startup.py`。

@@ -1,5 +1,7 @@
 # SGL-05 调度器
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/05-scheduler.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-05｜原理｜调度器：waiting、running 与 KV 预算。
 
 验证基线：sglang 主干 `8fabf5e`。脚本只用标准库，CPU 上能跑，单步耗时复用 `../03-bench/sim_serve.py` 的 Roofline 模型，KV 池容量复用 `../02-ledger/sim_ledger.py`。

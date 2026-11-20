@@ -1,14 +1,19 @@
 # SGL-16 结构化输出与 LoRA
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/16-structured-lora.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-16｜原理｜结构化输出与多 LoRA：约束解码和 adapter 批处理的代价。
 
-验证基线：sglang 主干 `8fabf5e`。脚本只用标准库，CPU 上能跑，不依赖 GPU、torch 和 sglang 本体。
+验证基线：sglang 主干 `8fabf5e`。模拟器和 `check_adapter.py` 只用标准库，CPU 上能跑，不依赖 GPU、torch 和 sglang 本体；`train_lora.py` 要装 `requirements-lora.txt`。
 
 | 文件 | 内容 |
 |---|---|
 | struct_sim.py | 各模型每行 token mask 的字节数（int32 位图 vs bool）、bs=256 的 H2D 量，逐行填 mask 和一步 decode 谁长；玩具正则语法的逐 token mask、跨语法单元的 token、rollback、投机草稿树 traverse_tree；编译线程池排队、同 schema 并发不命中导致的重复编译、json.dumps 不排序导致的缓存不命中、TP 间 ready 交集 / failed 并集、超时时长随 batch 变长；同步与推迟采样两种时间线下每步 ms；思考预算、多 token think_end 的 KMP 匹配、思考段屏蔽工具调用 token、跨 think_end 回滚 |
 | lora_sim.py | LoRA 池按 rank × mlpb × 模块一次分配，折成少了多少 KV token；一轮调度里谁进谁被跳过、pin 占槽、LRU 和 FIFO 在 Zipf 流量下的换入次数；csgmv 的排列与分段 vs triton 按请求发块；冷 adapter 在热流量下饿死，开 drainer 前后的等待；同步加载和 side stream 异步加载的代价 |
 | resolve_sim.py | grammar backend 默认值、strict thinking 和 grammar backend / UNO 的冲突、`check_lora_server_args` 和 `check_lora_speculative_compatibility` 的移植、pinned adapter 上限；请求级 `json_schema` / `max_thinking_tokens` 在不同启动参数下的结果 |
+| train_lora.py | 用 PEFT 在 `data/city_country.jsonl` 上训一个 LoRA adapter（城市 → 一行 JSON），只对 completion 算 loss，打印留出样本训练前后的输出；默认用随机权重的小 Llama 只验证流程，`--base Qwen/Qwen3-0.6B` 训真模型 |
+| check_adapter.py | 上线前检查：只读 `adapter_config.json` 和 safetensors 头部，对照 vLLM 和 SGLang 加载时的校验（rank 上限、DoRA、bias、modules_to_save、加词表、目标模块），给出两边的启动参数；只用标准库 |
+| test_lora_adapter.py | 13 个用例：12 个测 `check_adapter`，1 个在装了 torch / transformers / peft 时用小模型训一遍再检查 |
 | test_struct_lora.py | 76 个边界用例 |
 
 ## 和源码的对应
@@ -54,6 +59,63 @@ python3 resolve_sim.py                      # 20 条命令行的解析结果
 python3 resolve_sim.py --scenario request   # 请求级参数的结果
 python3 -m unittest test_struct_lora -v     # 约 1 秒
 ```
+
+## 自己训一个 LoRA adapter
+
+`serve_so_lora.sh` 和下面的模拟器都假设手里已经有 adapter。这一节从零训一个，再检查它能不能被两边加载。训练环境和推理环境分开装：
+
+```bash
+pip install -r ../requirements-lora.txt                     # torch、transformers、peft，CPU 就行
+python3 train_lora.py                                       # 随机权重的小 Llama，几秒，只验证流程
+python3 train_lora.py --base Qwen/Qwen3-0.6B --steps 80 --lr 1e-3 --out loras/qwen-city-r8
+python3 train_lora.py --base Qwen/Qwen3-0.6B --rank 64 --out loras/qwen-city-r64   # 换 rank，给多 LoRA 实验凑不同档位
+python3 check_adapter.py loras/*                            # 上线前检查，只要标准库
+python3 test_lora_adapter.py
+```
+
+任务是让模型把「城市：巴黎」答成一行 JSON。底座不会自发输出这个格式，训完的 adapter 会，所以加不加 adapter 一眼就能看出差别。下面是 Qwen3-0.6B 在 Apple M4 Pro 的 CPU 上实跑的输出（float32，batch 8，80 步）：
+
+```
+底座 Qwen/Qwen3-0.6B，LoRA r=8 alpha=16 模块 ['q_proj', 'k_proj', 'v_proj', 'o_proj']
+可训练参数 2,293,760 / 总参数 598,343,680（0.383%）
+  step    0  loss 2.3322
+  step   13  loss 0.0050
+  step   26  loss 0.0008
+  step   39  loss 0.0013
+  step   52  loss 0.0008
+  step   65  loss 0.0029
+  step   78  loss 0.0014
+  step   79  loss 0.0005
+训练 80 步，用时 73.3 s，adapter 存到 loras/qwen-city-r8
+留出的 4 条：loss 2.338 → 0.057，完全答对 0% → 75%
+探针 '城市：巴西利亚'
+  训练前 '时间：2023年'
+  训练后 '{"city": "巴西利亚", "country": "巴西"}'
+```
+
+留出的 4 个城市里答对 3 个。可训练参数只占 0.38%，adapter 文件 9.2 MB。`check_adapter.py` 对这个目录的检查结果：
+
+```
+== qwen-city-r8
+  底座      Qwen/Qwen3-0.6B
+  r / alpha 8 / 16
+  声明模块  ['v_proj', 'k_proj', 'o_proj', 'q_proj']
+  实际模块  ['k_proj', 'o_proj', 'q_proj', 'v_proj']（224 个张量）
+  vLLM    可以加载
+  SGLang  可以加载
+  vLLM    --enable-lora --max-lora-rank 8 --lora-modules qwen-city-r8=/绝对路径/loras/qwen-city-r8
+  SGLang  --enable-lora --max-lora-rank 8 --lora-target-modules k_proj o_proj q_proj v_proj --lora-paths qwen-city-r8=/绝对路径/loras/qwen-city-r8
+```
+
+几个容易踩的点，检查脚本都会报出来：
+
+- vLLM 的 `--max-lora-rank` 只能取 1、8、16、32、64、128、256、320、512，默认 16（`vllm/config/lora.py:27`）。rank 64 的 adapter 不改这个参数会加载失败。
+- SGLang 不传 `--max-lora-rank` 时，取启动时所有 adapter 里最大的 r（`lora/lora_manager.py:896`）；之后热加载更大 rank 的 adapter 会报 incompatible。
+- 两边都不支持 DoRA。vLLM 的 `modules_to_save` 只接受 `classifier` / `score`，所以把 `lm_head` 或 `embed_tokens` 也一起训的 adapter 上不了 vLLM。
+- 训练时往词表里加了 token（目录里有 `added_tokens.json`、id 超出底座词表），SGLang 拒绝加载。
+- SGLang 的 `--lora-target-modules` 会把 q/k/v_proj 归一成 `qkv_proj`、gate/up_proj 归一成 `gate_up_proj`；只写 `qkv_proj` 而 adapter 还训了 `o_proj`，同样加载失败。
+
+把训好的几个目录放进 `$LORA_DIR`，就能接着跑 `serve_so_lora.sh lora`、`lora_bench` 和 `sgl_lora`。GPU 上的加载和压测本节没有实测。
 
 ## 期望输出
 

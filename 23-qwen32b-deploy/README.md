@@ -1,5 +1,7 @@
 # SGL-23 Qwen3-32B 部署规划
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/23-qwen32b-deploy.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-23｜实战｜Qwen3-32B：单卡到两卡的 SGLang 部署，以及迁到 Qwen3.8-27B。文档先算 KV 能放多少 token，再按卡的架构选精度和卡数。本目录的 plan.py 对应文档第 2、3、7、8 章：输入卡型，复算 sglang 默认的 mem_fraction_static，算出每卡权重、KV 预算和能放的 token 数，选出精度和 TP，再给出启动命令。加 `--qwen38` 改算 Qwen3.8-27B 的 GDN 状态槽和 KV 怎么分。
 
 验证基线：sglang 主干 `8fabf5e`。plan.py 只用标准库，不依赖 GPU、torch 和 sglang 本体。

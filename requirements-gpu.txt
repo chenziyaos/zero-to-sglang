@@ -1,0 +1,7 @@
+# GPU 实验：*.sh 启动、压测和部署脚本。推荐直接用官方镜像 lmsysorg/sglang（见 README 版本基线）。
+# sglang 0.5.22 依赖预发布包 cuda-tile，安装时要加 --prerelease=allow：
+#   pip install --prerelease=allow -r requirements-gpu.txt
+# wheel 只提供 manylinux_2_34（x86_64 / aarch64）。
+# 已用 uv pip compile 在 Python 3.11、Linux x86_64 上解析通过；没有在 GPU 上逐个脚本实跑。
+-r requirements-cpu.txt
+sglang==0.5.22
