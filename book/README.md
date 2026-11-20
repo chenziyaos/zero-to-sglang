@@ -1,8 +1,8 @@
 # Zero To SGLang
 
-> 本目录是「从 0 开始 SGLang」系列文档的 Markdown 版，共 24 章，由飞书原文转换，正文与原文一致，画板导出为图片放在 `assets/`。配套代码在仓库根目录，每章一个目录。
+> 本目录是「从 0 开始 SGLang」系列文档的 Markdown 版，共 25 章，由飞书原文转换，正文与原文一致，画板导出为图片放在 `assets/`。配套代码在仓库根目录，每章一个目录。
 
-> 🎯 **遇到的问题**：这套手册想把 SGLang 从“能启动”学到“能改内核、能扛线上流量”。本篇是 24 章的入口和路线图，列出每章读完交付什么、练习代码放在哪。
+> 🎯 **遇到的问题**：这套手册想把 SGLang 从“能启动”学到“能改内核、能扛线上流量”。本篇是 25 章的入口和路线图，列出每章读完交付什么、练习代码放在哪。
 >
 > **怎么读**：先看导读和路线图，再到第 3 章按岗位挑一条主线。每读完一章，跑通对应目录的练习，再用第 5 章的验收题自测，其余章节当查阅手册。文中版本、价格和基准分数核对于 2026 年 10 月 28 日。
 >
@@ -52,7 +52,7 @@ SGLang 的论文把它定义成一门前端语言加一个运行时。前端提�
 - **L1 跑起来（约一周，01 至 03）**：部署一个模型，用 OpenAI 兼容接口打通请求。算出一张卡的权重、KV 和激活各占多少。交一份写清负载、并发和版本的压测报告。
 - **L2 读懂内核（三到四周，04 至 10）**：沿一条请求的路径读完 tokenizer、scheduler、detokenizer 三个进程；把调度循环、chunked prefill、内存池、基数树、overlap 与 CUDA Graph、注意力后端逐个拆开。这一级的练习大多在 CPU 上做，用模拟器复现主干的关键数据结构。
 - **L3 规模化（三到四周，11 至 16）**：多卡并行、量化、投机解码、分层缓存、PD 分离、结构化输出与 LoRA。每章回答同一个问题：这项技术在什么负载下值得开，代价落在哪里。
-- **L4 生产与贡献（持续，17 至 24）**：参数调优手册、可观测与 profiling、集群路由与 RL rollout、42 天主干前沿复盘、DeepSeek 开源对 SGLang 的影响，DeepSeek-V4.1-Flash 从消费级显卡到 H20 的部署实战，Qwen3-32B 从单卡到两卡的部署和迁到 Qwen3.8-27B 的配比，以及 Qwen3.8-27B 混合 GDN 视觉模型按状态槽和 KV 两本账部署。这一级没有终点，章节会随上游版本更新。
+- **L4 生产与贡献（持续，17 至 25）**：参数调优手册、可观测与 profiling、集群路由与 RL rollout、42 天主干前沿复盘、DeepSeek 开源对 SGLang 的影响，DeepSeek-V4.1-Flash 从消费级显卡到 H20 的部署实战，Qwen3-32B 从单卡到两卡的部署和迁到 Qwen3.8-27B 的配比，以及 Qwen3.8-27B 混合 GDN 视觉模型按状态槽和 KV 两本账部署，以及 embedding 与 rerank 这类只有 prefill 的服务怎么配。这一级没有终点，章节会随上游版本更新。
 
 ## 1.3 章节落在架构上的位置
 
@@ -85,7 +85,7 @@ SGLang Runtime（SRT）把一次推理拆到三个进程里：HTTP 服务与 Tok
 
 > 💡 **踩过的坑**：我们曾拿着一年前的博客或教程对照主干读源码。SGLang 每周合入大量改动，文件会拆分和改名，例如 CUDA Graph runner 已拆进 model_executor/runner/，内存分配器拆进 mem_cache/allocator/。现在读源码时以类名和函数名为锚点，用 grep 定位，不按旧文章里的行号找。
 
-# 第 2 章 · 二十四章清单
+# 第 2 章 · 二十五章清单
 
 下面四张表是系列的完整目录。源码列只写文件名，链接固定到提交 8fabf5e 的完整路径；练习列是配套仓库里的目录名，随章节发布逐个填满。
 
@@ -132,8 +132,9 @@ SGLang Runtime（SRT）把一次推理拆到三个进程里：HTTP 服务与 Tok
 | [SGL-22｜实战｜DeepSeek-V4.1-Flash：消费级显卡与 H20 上的 SGLang 部署](./22-dsv41-deploy.md) | 一台机器落在哪一档：16 GB 消费级卡怎样靠 KT-Kernel 和主机内存跑起 510 GB 的模型，H20 上 Engram 放置和 DSpark 怎么取舍，估算和实测怎么对照 | [engram_config.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/arg_groups/engram_config.py)，[flashmla_backend.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/layers/attention/flashmla_backend.py) | [[77]](https://docs.sglang.io/cookbook/autoregressive/DeepSeek/DeepSeek-V4_1)[[78]](https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/DeepSeek-V4-Flash.md) | [22-dsv41-deploy](../22-dsv41-deploy) |
 | [SGL-23｜实战｜Qwen3-32B：单卡到两卡的 SGLang 部署，以及迁到 Qwen3.8-27B](./23-qwen32b-deploy.md) | 一张卡该用 FP8 还是 AWQ、单卡还是两卡：复算默认 mem_fraction_static 和 KV 容量，按架构选内核，EAGLE3 什么时候开，迁到 Qwen3.8-27B 后状态槽和 KV 怎么配比 | [memory_hook.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/arg_groups/memory_hook.py)，[kv_cache_configurator.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/mem_cache/kv_cache_configurator.py) | [[79]](https://huggingface.co/Qwen/Qwen3-32B)[[80]](https://docs.sglang.io/cookbook/autoregressive/Qwen/Qwen3)[[81]](https://lmsysorg.mintlify.app/cookbook/autoregressive/Qwen/Qwen3.8-27B) | [23-qwen32b-deploy](../23-qwen32b-deploy) |
 | [SGL-24｜实战｜Qwen3.8-27B：混合 GDN 视觉模型的 SGLang 部署](./24-qwen38-27b-deploy.md) | 混合 GDN 视觉模型怎么分两本账：48 层线性注意力只按请求占状态槽、16 层全注意力按 token 占 KV，平衡配比怎么算，按张量核代际选 checkpoint，5090 和 DGX Spark 的实测钉死值，视觉、工具与投机解码怎么接 | [qwen3_5.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/models/qwen3_5.py)，[kv_cache_configurator.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/mem_cache/kv_cache_configurator.py)，[unified_memory_pool.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/mem_cache/unified_memory_pool.py) | [[82]](https://huggingface.co/Qwen/Qwen3.8-27B)[[81]](https://lmsysorg.mintlify.app/cookbook/autoregressive/Qwen/Qwen3.8-27B)[[83]](https://recipes.vllm.ai/Qwen/Qwen3.8-27B) | `24-qwen-hybrid-deploy` |
+| [SGL-25｜专题｜Embedding 与 Rerank 服务：只有 prefill 的引擎怎么配](./25-embedding-rerank.md) | embedding 请求 prefill 完怎么结束；Qwen3-Embedding 为什么必须加 <code>--is-embedding</code>、Qwen3-Reranker 为什么必须不加；bge 系列的 radix cache 和分块为什么要手动关；<code>--prefill-only-disable-kv-cache</code> 省的是显存还是时间；精排 100 篇的在线算力为什么是召回的 1274 倍；<code>dimensions</code> 截维怎么声明 | [batch_result_processor.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/managers/scheduler_components/batch_result_processor.py)，[embedding_model_spec.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/configs/embedding_model_spec.py)，[serving_rerank.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/entrypoints/openai/serving_rerank.py)，[kv_cache_configurator.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/mem_cache/kv_cache_configurator.py) | [[8]](https://github.com/sgl-project/sglang/blob/8fabf5e/docs/docs/supported-models/rerank_models.mdx)[[9]](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B)[[13]](https://arxiv.org/abs/2205.13147) | [25-embedding-rerank](../25-embedding-rerank) |
 
-> 🔑 **学到的**：四级共二十四章。L1 三章交付“能跑、能算、能测”，L2 七章交付“能读懂和修改 Scheduler 进程”，L3 六章交付“能为一个模型设计多卡部署方案”，L4 八章交付“能对线上问题做根因，能独立读懂和验证主干的新改动，能判断上游模型方的开源会把引擎推向哪里，并能把超大 MoE、稠密模型和混合架构模型落到手头的硬件上”。
+> 🔑 **学到的**：四级共二十五章。L1 三章交付“能跑、能算、能测”，L2 七章交付“能读懂和修改 Scheduler 进程”，L3 六章交付“能为一个模型设计多卡部署方案”，L4 九章交付“能对线上问题做根因，能独立读懂和验证主干的新改动，能判断上游模型方的开源会把引擎推向哪里，并能把超大 MoE、稠密模型和混合架构模型落到手头的硬件上”。
 
 # 第 3 章 · 三条读法
 
@@ -143,7 +144,7 @@ SGLang Runtime（SRT）把一次推理拆到三个进程里：HTTP 服务与 Tok
 
 ## 3.1 部署与运维
 
-目标是把模型稳定跑在 SLO 之内。主线是 01、02、03 打底，直接跳到 17 调参和 18 观测，再按需补 15 PD 分离、19 集群路由和 22 至 24 三篇部署实战。内核章节里 05 调度器和 07 内存池至少读概念部分，因为大多数调参动作改的就是这两处的行为。
+目标是把模型稳定跑在 SLO 之内。主线是 01、02、03 打底，直接跳到 17 调参和 18 观测，再按需补 15 PD 分离、19 集群路由和 22 至 24 三篇部署实战；要上检索服务的再读 25。内核章节里 05 调度器和 07 内存池至少读概念部分，因为大多数调参动作改的就是这两处的行为。
 
 ## 3.2 引擎开发
 
@@ -207,7 +208,7 @@ zero-to-sglang/
 ├── 03-bench/            # 压测脚本（GPU）与结果统计（CPU）
 ├── 04-request-path/ … 10-attention-backend/   # L2：CPU 模拟器 + 主干对照
 ├── 11-parallelism/ … 16-structured-lora/      # L3：账本、模拟器、部署脚本
-└── 17-tuning/ … 24-qwen-hybrid-deploy/             # L4：调参清单、指标解析、读 PR 工具、部署脚本
+└── 17-tuning/ … 25-embedding-rerank/               # L4：调参清单、指标解析、读 PR 工具、部署脚本
 ```
 
 约定：文件名以 sim\_ 开头的是 CPU 模拟器，以 gpu\_ 开头的需要 GPU，以 .sh 结尾的是启动或压测脚本。所有脚本在文件头注明对应的 SGLang 版本。
@@ -228,7 +229,7 @@ zero-to-sglang/
 | 第 6 周 | 12、13 | 量化精度对比、投机解码收益估算 |
 | 第 7 周 | 14、15 | 分层缓存与 PD 分离的模拟对比 |
 | 第 8 周 | 16、17 | 结构化输出开销实测、一份调参记录 |
-| 第 9 至 10 周 | 18 至 24 | 一份 profile 分析、一个路由模拟、一份新 PR 的复现报告、一份 V4.1-Flash、Qwen3-32B 或 Qwen3.8-27B 的部署压测记录 |
+| 第 9 至 10 周 | 18 至 25 | 一份 profile 分析、一个路由模拟、一份新 PR 的复现报告、一份 V4.1-Flash、Qwen3-32B 或 Qwen3.8-27B 的部署压测记录，或一份 embedding / rerank 服务的压测记录 |
 
 ## 5.2 每级验收
 
@@ -443,3 +444,4 @@ zero-to-sglang/
 - [SGL-22｜实战｜DeepSeek-V4.1-Flash：消费级显卡与 H20 上的 SGLang 部署](./22-dsv41-deploy.md)
 - [SGL-23｜实战｜Qwen3-32B：单卡到两卡的 SGLang 部署，以及迁到 Qwen3.8-27B](./23-qwen32b-deploy.md)
 - [SGL-24｜实战｜Qwen3.8-27B：混合 GDN 视觉模型的 SGLang 部署](./24-qwen38-27b-deploy.md)
+- [SGL-25｜专题｜Embedding 与 Rerank 服务：只有 prefill 的引擎怎么配](./25-embedding-rerank.md)

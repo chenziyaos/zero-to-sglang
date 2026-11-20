@@ -1,0 +1,3 @@
+# CPU 练习：sim_*.py 和 test_*.py 只用 Python 3.10+ 标准库，不装任何包也能跑。
+# pytest 是可选的测试运行器，也可以直接 python3 test_xxx.py。
+pytest==9.2.0

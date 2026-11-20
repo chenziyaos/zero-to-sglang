@@ -1,5 +1,7 @@
 # SGL-09 Overlap 调度与 CUDA Graph
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/09-overlap-cudagraph.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-09｜原理｜Overlap 调度与 CUDA Graph：把 CPU 开销藏到 GPU 后面。
 
 验证基线：sglang 主干 `8fabf5e`。脚本只用标准库，CPU 上能跑，不依赖 GPU 和 sglang 本体。

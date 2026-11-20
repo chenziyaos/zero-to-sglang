@@ -4,6 +4,12 @@
 
 系列文档的 Markdown 版放在 [`book/`](book/README.md)，从索引页 SGL-00 读起；各章末尾有上一章、下一章的链接。
 
+## 在 Colab 上跑
+
+[`colab/`](colab/) 下每章一个 notebook，打开后依次执行：克隆本仓库、装 `requirements-cpu.txt`、跑本章单元测试、跑正文里的 CPU 命令。notebook 里的命令都在 Python 3.11 的 CPU 环境下实跑过，退出码为 0；少数演示脚本按设计以非 0 退出（样例本身不达标），已在命令后注明。需要 GPU、模型文件或运行中服务的命令没有放进去。
+
+入口示例：[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/02-ledger.ipynb)
+
 ## 版本基线
 
 - SGLang 主干提交 `8fabf5e`（2026-10-28），发行版 `v0.5.22`（2026-10-19）
@@ -47,8 +53,19 @@
 | `21-deepseek/` | SGL-21 DeepSeek 开源与 SGLang | check_config.py 推 V4.1 注意力后端与校验 Engram 配置、align_bench.py 对齐 DeepInfer 复测测法 |
 | `22-dsv41-deploy/` | SGL-22 DeepSeek-V4.1-Flash 部署 | plan.py 按卡型分档、算每卡显存账并给启动命令，host_setup.sh 消费级主机设置，bench_h20.sh H20 压测 |
 | `23-qwen32b-deploy/` | SGL-23 Qwen3-32B 部署 | plan.py 按卡型选精度和卡数、复算默认 mem-fraction 和 KV 容量并给启动命令，含 Qwen3.8-27B 状态槽配比；smoke.py、bench.sh |
+| `25-embedding-rerank/` | SGL-25 Embedding 与 Rerank 服务 | `--is-embedding` 什么时候必须加、Qwen3-Reranker 为什么不能加、`--prefill-only-disable-kv-cache`、rerank 算力账、截维；起服、压测和客户端 |
 
 目录会随章节发布逐个填满，还没发布的章节目录里只有一份 README 写明计划。
+
+## 安装依赖
+
+依赖分三档，版本都锁定了：
+
+```bash
+pip install -r requirements-cpu.txt          # 模拟器和单元测试
+pip install --prerelease=allow -r requirements-gpu.txt   # 有 GPU 的机器
+pip install -r requirements-lora.txt         # 16 章训练 LoRA adapter，CPU 即可，和 GPU 环境分开装
+```
 
 ## 快速试跑
 
@@ -64,3 +81,17 @@ python3 sim_ledger.py --model llama3.1-70b --gpu h100-sxm --tp 4 --kv-dtype fp8
 - Mini-SGLang：https://github.com/sgl-project/mini-sglang
 - zero-to-sglang 课程：https://github.com/datawhalechina/zero-to-sglang
 - 官方文档：https://docs.sglang.io/
+
+## 引用
+
+如果本系列对你的工作有帮助，可以这样引用：
+
+```bibtex
+@misc{zero-to-sglang,
+  author       = {chenziyaos},
+  title        = {从 0 开始 SGLang（zero-to-sglang）},
+  year         = {2026},
+  howpublished = {\url{https://github.com/chenziyaos/zero-to-sglang}},
+  note         = {GitHub repository}
+}
+```

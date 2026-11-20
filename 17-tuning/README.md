@@ -1,5 +1,7 @@
 # SGL-17 参数调优手册
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/17-tuning.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-17｜实战｜参数调优手册：从日志倒推配置。
 
 验证基线：sglang 主干 `8fabf5e`。脚本只用标准库，CPU 上能跑，不依赖 GPU、torch 和 sglang 本体。

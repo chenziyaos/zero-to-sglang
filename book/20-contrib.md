@@ -772,4 +772,4 @@ disaggregation_decode_host_receive_threshold 取值仍在 0 到 1，但 0 和 1 
 
 ---
 
-上一章：[SGL-19｜实战｜集群与 RL rollout：路由、权重同步与长尾](./19-cluster-rl.md) · [目录](./README.md) · 下一章：[SGL-21｜前沿｜DeepSeek 开源如何改写 SGLang：从 kernel 到 DeepInfer](./21-deepseek.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/20-contrib.ipynb) · 上一章：[SGL-19｜实战｜集群与 RL rollout：路由、权重同步与长尾](./19-cluster-rl.md) · [目录](./README.md) · 下一章：[SGL-21｜前沿｜DeepSeek 开源如何改写 SGLang：从 kernel 到 DeepInfer](./21-deepseek.md)

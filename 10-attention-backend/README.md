@@ -1,5 +1,7 @@
 # SGL-10 注意力后端
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/10-attention-backend.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-10｜原理｜注意力后端：FlashInfer、FA3、Triton、TRTLLM 怎么选、怎么接进 CUDA Graph。
 
 验证基线：sglang 主干 `8fabf5e`。脚本只用标准库，CPU 上能跑，不依赖 GPU 和 sglang 本体。

@@ -1,5 +1,7 @@
 # SGL-08 RadixAttention
 
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/08-radix-attention.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+
 对应飞书文档：SGL-08｜原理｜RadixAttention：基数树的匹配、插入、加锁与驱逐。
 
 验证基线：sglang 主干 `8fabf5e`。脚本只用标准库，CPU 上能跑，不依赖 GPU 和 sglang 本体。

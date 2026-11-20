@@ -679,4 +679,4 @@ python3 -m sglang.launch_server --model-path Qwen/Qwen3-8B --enable-metrics \
 
 ---
 
-上一章：[SGL-16｜原理｜结构化输出与多 LoRA：约束解码和 adapter 批处理的代价](./16-structured-lora.md) · [目录](./README.md) · 下一章：[SGL-18｜实战｜可观测与 profiling：从指标到 kernel](./18-observability.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/17-tuning.ipynb) · 上一章：[SGL-16｜原理｜结构化输出与多 LoRA：约束解码和 adapter 批处理的代价](./16-structured-lora.md) · [目录](./README.md) · 下一章：[SGL-18｜实战｜可观测与 profiling：从指标到 kernel](./18-observability.md)

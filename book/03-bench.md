@@ -422,4 +422,4 @@ bench.sh 固定了几项容易漏掉的参数：--random-range-ratio 1.0 让长�
 
 ---
 
-上一章：[SGL-02｜上手｜推理账本：显存、KV 与 Roofline](./02-ledger.md) · [目录](./README.md) · 下一章：[SGL-04｜原理｜请求旅程：从 HTTP 到流式返回](./04-request-path.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/03-bench.ipynb) · 上一章：[SGL-02｜上手｜推理账本：显存、KV 与 Roofline](./02-ledger.md) · [目录](./README.md) · 下一章：[SGL-04｜原理｜请求旅程：从 HTTP 到流式返回](./04-request-path.md)

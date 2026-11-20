@@ -406,4 +406,4 @@ decode 的下限按平均上下文 input + output/2 算。MBU 稳定在 74% 说�
 
 ---
 
-上一章：[SGL-01｜上手｜第一个服务：安装、启动、发请求和读懂启动日志](./01-first-server.md) · [目录](./README.md) · 下一章：[SGL-03｜上手｜指标与压测：TTFT、TPOT、ITL 与 goodput](./03-bench.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/02-ledger.ipynb) · 上一章：[SGL-01｜上手｜第一个服务：安装、启动、发请求和读懂启动日志](./01-first-server.md) · [目录](./README.md) · 下一章：[SGL-03｜上手｜指标与压测：TTFT、TPOT、ITL 与 goodput](./03-bench.md)
