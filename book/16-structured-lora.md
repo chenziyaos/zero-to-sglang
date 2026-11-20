@@ -534,6 +534,43 @@ curl -s localhost:30001/metrics | grep -E 'lora_pool_(slots_used|slots_total|uti
 
 第 5 步启动日志里 max_total_num_tokens 和不开 LoRA 时比一下，差值就是 4.5 节表里的「少 KV token」。第 6 步的 Zipf 参数要求大于 1，压完看 lora_pool_utilization，长期接近 1 说明槽位紧，换入次数会多，可以加 mlpb 或者把大 rank 的 adapter 拆出去。指标的完整含义见生产指标文档[[22]](https://docs.sglang.io/docs/references/production_metrics)。
 
+## 4.8 自己训一个 LoRA adapter
+
+4.5 到 4.7 的模拟和真机步骤都假设 `/ckpt` 下已经有 adapter。这一节从零训一个，再检查它能不能被 SGLang 和 vLLM 加载。代码在 [16-structured-lora](../16-structured-lora) 的 `train_lora.py` 和 `check_adapter.py`。训练依赖 torch、transformers 和 peft，CPU 就能跑，和推理环境分开装；检查脚本只用标准库。
+
+```bash
+pip install -r ../requirements-lora.txt
+python3 train_lora.py
+python3 train_lora.py --base Qwen/Qwen3-0.6B --steps 80 --lr 1e-3 --out loras/qwen-city-r8
+python3 train_lora.py --base Qwen/Qwen3-0.6B --rank 64 --out loras/qwen-city-r64
+python3 check_adapter.py loras/*
+python3 test_lora_adapter.py
+```
+
+第一条命令用随机权重的小 Llama 跑几秒，只验证流程；第三条换 rank 64，给 4.5 节的「按最大 rank 开池子」凑一个大档位，r8 和 r64 一起加载时池子按 64 开。任务是让模型把「城市：巴黎」答成一行 JSON：数据是 40 对城市和国家，最后 4 对留出不参与训练。底座不会自发输出这个格式，训完的 adapter 会，加不加 adapter 一眼就能看出差别。
+
+在 Apple M4 Pro 的 CPU 上实跑 Qwen3-0.6B（float32，batch 8，80 步，学习率 1e-3，r=8，alpha=16，只训 q/k/v/o_proj）：用时 73.3 秒，训练 loss 从 2.3322 降到 0.0005；留出的 4 条 loss 从 2.338 降到 0.057，完全答对从 0 条变成 3 条。可训练参数 2,293,760 个，占总参数 598,343,680 的 0.383%，adapter 文件 9.2 MB、224 个张量。探针「城市：巴西利亚」训练前答成「时间：2023年」，训练后答成 `{"city": "巴西利亚", "country": "巴西"}`。
+
+```plaintext
+== qwen-city-r8
+  底座      Qwen/Qwen3-0.6B
+  r / alpha 8 / 16
+  声明模块  ['v_proj', 'k_proj', 'o_proj', 'q_proj']
+  实际模块  ['k_proj', 'o_proj', 'q_proj', 'v_proj']（224 个张量）
+  vLLM    可以加载
+  SGLang  可以加载
+  vLLM    --enable-lora --max-lora-rank 8 --lora-modules qwen-city-r8=/绝对路径/loras/qwen-city-r8
+  SGLang  --enable-lora --max-lora-rank 8 --lora-target-modules k_proj o_proj q_proj v_proj --lora-paths qwen-city-r8=/绝对路径/loras/qwen-city-r8
+```
+
+检查脚本按两家的加载规则逐条核对，SGLang 这边最容易踩的有三处：
+
+- 不传 `--max-lora-rank` 时，池子按启动时所有 adapter 里最大的 r 开（[srt/lora/lora_manager.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/lora/lora_manager.py) 第 896 行）。之后用 `/load_lora_adapter` 热加载更大 rank 的 adapter 会报 incompatible，所以 4.7 节的启动命令显式写了这个参数。
+- `--lora-target-modules` 会把 q/k/v_proj 归一成 `qkv_proj`、gate/up_proj 归一成 `gate_up_proj`（[srt/lora/utils.py](https://github.com/sgl-project/sglang/blob/8fabf5e/python/sglang/srt/lora/utils.py) 第 277 行）；只写 `qkv_proj` 而 adapter 还训了 `o_proj`，加载失败。
+- 训练时往词表里加了 token（目录里有 `added_tokens.json`，或 id 超出底座词表）的 adapter，SGLang 拒绝加载（`lora_manager.py` 第 337 行）；DoRA 两家都不支持。
+
+vLLM 那边多两条限制：`--max-lora-rank` 只能取 1、8、16、32、64、128、256、320、512，`modules_to_save` 只接受分类头，检查脚本会一并报出来。把训好的目录换成 4.7 节里的 `/ckpt/a$i`，就能接着做第 5 步和第 6 步。训练和检查在 CPU 上实跑过；GPU 上的加载、输出质量和压测本节没有实测。
+
 # 第 5 章 · 调过的参数和踩过的坑
 
 ## 5.1 动过的参数
@@ -605,6 +642,7 @@ curl -s localhost:30001/metrics | grep -E 'lora_pool_(slots_used|slots_total|uti
 > - 结构化输出和投机解码一起开时，重新测过加速比；格式约束对正确率的影响在业务评测集上对比过
 > - 显式写了 LoRA 的 --max-lora-rank、--lora-target-modules，启动日志里的 max_total_num_tokens 和不开 LoRA 时比过，差值和 4.5 节的估算对得上
 > - adapter 数多于槽位时设了 --lora-drain-wait-threshold，冷 adapter 的最长等待和热 adapter 的 p99 都压测过；长 prefill 负载调过 --max-lora-chunk-size
+> - 新 adapter 上线前跑过 check_adapter.py，rank 不超过 --max-lora-rank，target 模块被 --lora-target-modules 覆盖，词表没有新增 token
 > - 用线上参数跑过三个脚本，resolve_sim.py 的输出里没有启动失败，WARN 每一行都查清了原因；监控里有 grammar 队列、编译耗时、aborted、timeout 和 lora_pool_utilization
 
 > 🔑 **学到的**：结构化输出在每一步采样前给每条带语法的请求填一行位图，位图拷到 GPU 很便宜，贵的是 CPU 逐行填，时间和 batch 成正比；overlap 能把它藏在前向后面，藏不住的部分直接加在每一步上，复杂 CFG 在 bs 128 以上就藏不住。语法对象第一次要编译，主干没有 in-flight 去重，缓存 key 不排序，超时按轮数算还会写进缓存，新 schema 上线的尖峰都出在这里。投机解码加语法时 verify 之后那一步关 overlap，jump forward 已经不在调度路径上。思考模型靠 Reasoner 让思考段自由、只约束正文，strict thinking 加预算要配 reasoning parser。多 LoRA 的池子按最大 rank、槽位数和模块并集在 KV 之前一次开好，直接从 KV 里扣。调度时 adapter 数（含 base）不超过槽位，放不下的被跳过，冷 adapter 靠 drainer 排空让槽。csgmv 按 adapter 排序切段，长 prefill 要调大 chunk。异步加载让冷 adapter 自己等，不拖累整批。
@@ -669,4 +707,4 @@ curl -s localhost:30001/metrics | grep -E 'lora_pool_(slots_used|slots_total|uti
 
 ---
 
-上一章：[SGL-15｜原理｜PD 分离：prefill 和 decode 拆到两组卡上](./15-pd-disagg.md) · [目录](./README.md) · 下一章：[SGL-17｜实战｜参数调优手册：从日志倒推配置](./17-tuning.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/16-structured-lora.ipynb) · 上一章：[SGL-15｜原理｜PD 分离：prefill 和 decode 拆到两组卡上](./15-pd-disagg.md) · [目录](./README.md) · 下一章：[SGL-17｜实战｜参数调优手册：从日志倒推配置](./17-tuning.md)

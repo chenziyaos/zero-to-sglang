@@ -677,6 +677,8 @@ KV 量化是我们认为最被低估、也最容易被滥用的一项。它对�
 
 下一步：[SGL-13｜原理｜投机解码：EAGLE、MTP、NGRAM 怎么选、怎么调](./13-speculative.md) 讲投机解码。这一篇用低精度省带宽，下一篇换一个角度：decode 一步只出一个 token，算力大量闲置，能不能用一个小的草稿模型一次猜几个 token，让大模型一次验证完。会讲 EAGLE、MTP 和 n-gram 三种草稿怎么在 SGLang 里跑，接受率和加速比怎么算，以及什么负载下投机解码反而变慢。
 
+**延伸阅读**：Maarten Grootendorst 的 [A Visual Guide to Quantization](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization)（2024 年 7 月）用示意图讲对称和非对称量化、离群值裁剪、GPTQ、GGUF 的分块量化和 BitNet，适合在读本篇的账本之前先建立直觉。它不讲推理引擎里的 kernel 选择和 KV cache 量化，这两块以本篇为准。
+
 # 参考文献
 
 按正文首次引用顺序编号，资料截至 2026 年 10 月底。源码以 sgl-project/sglang 主干提交 8fabf5e（2026 年 10 月 28 日）和 v0.5.22 发行版为准。
@@ -733,4 +735,4 @@ KV 量化是我们认为最被低估、也最容易被滥用的一项。它对�
 
 ---
 
-上一章：[SGL-11｜原理｜并行：TP、DP Attention、EP 怎么组合](./11-parallelism.md) · [目录](./README.md) · 下一章：[SGL-13｜原理｜投机解码：EAGLE、MTP、NGRAM 怎么选、怎么调](./13-speculative.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/12-quantization.ipynb) · 上一章：[SGL-11｜原理｜并行：TP、DP Attention、EP 怎么组合](./11-parallelism.md) · [目录](./README.md) · 下一章：[SGL-13｜原理｜投机解码：EAGLE、MTP、NGRAM 怎么选、怎么调](./13-speculative.md)

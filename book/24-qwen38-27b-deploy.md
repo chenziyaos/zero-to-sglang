@@ -431,6 +431,8 @@ vLLM 0.17.0 起有这个模型的官方配方，思路相近、参数不同。BF
 
 这一篇和 [SGL-23｜实战｜Qwen3-32B：单卡到两卡的 SGLang 部署，以及迁到 Qwen3.8-27B](./23-qwen32b-deploy.md) 是稠密模型部署的上下篇：那一篇只有 KV 一本账，这一篇是状态槽加 KV 两本账，plan.py 的结构和 23 篇一致，只是多了状态池、配比和投机中间态。和 [SGL-22｜实战｜DeepSeek-V4.1-Flash：消费级显卡与 H20 上的 SGLang 部署](./22-dsv41-deploy.md) 的对照也还在：大 MoE 难在权重放不下，这个模型难在固定状态和 KV 的配比，做法都是先按访问模式拆显存，再按卡型分档，最后用日志和压测验证。
 
+**延伸阅读**：Maarten Grootendorst 的 [A Visual Guide to Mamba and State Space Models](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mamba-and-state)（2024 年 2 月）从 SSM、S4 讲到 Mamba 的选择性扫描，适合先弄清「固定大小的状态为什么能替代随长度增长的 KV」。本篇的 GDN / KDA 属于线性注意力一支，和 Mamba 一样按固定状态记账，但递推形式不同，状态大小和显存账以本篇为准。
+
 # 参考文献
 
 按正文首次引用顺序编号，资料截至 2026 年 10 月底。源码以 sgl-project/sglang 主干提交 8fabf5e（2026 年 10 月 28 日）和 v0.5.19/v0.5.22 发行版为准。结构、checkpoint 体积与字段取自 Hugging Face 上 Qwen、RadixArk、nvidia、incoai 的 Qwen3.8-27B 模型卡和 config.json。
@@ -483,4 +485,4 @@ vLLM 参数、硬件下限与 Intel XPU 配方来自 vLLM Recipes 的 Qwen3.8-27
 
 ---
 
-上一章：[SGL-23｜实战｜Qwen3-32B：单卡到两卡的 SGLang 部署，以及迁到 Qwen3.8-27B](./23-qwen32b-deploy.md) · [目录](./README.md)
+上一章：[SGL-23｜实战｜Qwen3-32B：单卡到两卡的 SGLang 部署，以及迁到 Qwen3.8-27B](./23-qwen32b-deploy.md) · [目录](./README.md) · 下一章：[SGL-25｜专题｜Embedding 与 Rerank 服务：只有 prefill 的引擎怎么配](./25-embedding-rerank.md)
