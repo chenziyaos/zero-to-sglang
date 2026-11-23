@@ -1,6 +1,6 @@
 # SGL-25 Embedding 与 Rerank 服务
 
-[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/25-embedding-rerank.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/25-embedding-rerank.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
 
 对应飞书文档：SGL-25｜专题｜Embedding 与 Rerank 服务：只有 prefill 的引擎怎么配。
 

@@ -1,6 +1,6 @@
 # SGL-22 DeepSeek-V4.1-Flash 部署规划
 
-[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/22-dsv41-deploy.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/22-dsv41-deploy.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
 
 对应飞书文档：SGL-22｜实战｜DeepSeek-V4.1-Flash：消费级显卡与 H20 上的 SGLang 部署。文档把可用机器分成五档，从 8 卡 H20 原生部署一直到消费级单卡加 KT-Kernel 混合推理。本目录的 plan.py 对应文档第 2、3、5 章：输入卡型、卡数和主机内存，算出机器落在哪一档、每卡显存怎么分，再给出和文档一致的启动命令。有公开实测的配置（8×H20-3e、4×RTX PRO 6000、2×RTX 5070 Ti）会把实测行一起打出来，自己压完可以直接对照。
 

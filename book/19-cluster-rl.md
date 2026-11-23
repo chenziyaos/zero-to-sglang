@@ -621,4 +621,4 @@ RL 这一半，我们的判断是 rollout 的瓶颈会长期是长尾，而不�
 
 ---
 
-[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/19-cluster-rl.ipynb) · 上一章：[SGL-18｜实战｜可观测与 profiling：从指标到 kernel](./18-observability.md) · [目录](./README.md) · 下一章：[SGL-20｜前沿｜42 天主干复盘：缓存寻址、PD 状态与投机解码的组合边界](./20-contrib.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/19-cluster-rl.ipynb) · 上一章：[SGL-18｜实战｜可观测与 profiling：从指标到 kernel](./18-observability.md) · [目录](./README.md) · 下一章：[SGL-20｜前沿｜42 天主干复盘：缓存寻址、PD 状态与投机解码的组合边界](./20-contrib.md)

@@ -450,4 +450,4 @@ livenessProbe:           # 真的生成 1 个 token，能发现 Scheduler 卡死
 
 ---
 
-[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/01-first-server.ipynb) · [目录](./README.md) · 下一章：[SGL-02｜上手｜推理账本：显存、KV 与 Roofline](./02-ledger.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/01-first-server.ipynb) · [目录](./README.md) · 下一章：[SGL-02｜上手｜推理账本：显存、KV 与 Roofline](./02-ledger.md)
