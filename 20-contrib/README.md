@@ -1,6 +1,6 @@
 # SGL-20 读新 PR 与提 PR 的工具
 
-[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/20-contrib.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/20-contrib.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
 
 对应飞书文档：SGL-20｜前沿｜42 天主干复盘：缓存寻址、PD 状态与投机解码的组合边界。文档按“原来卡在哪、引入了什么机制、代价落在哪”读主干的新改动；本目录的脚本用来在本地克隆里定位这些改动涉及的符号、自查自己的 PR。
 

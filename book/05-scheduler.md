@@ -405,4 +405,4 @@ python3 sim_scheduler.py --workload random --num 400 --out 1024 --max-total-toke
 
 ---
 
-[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/05-scheduler.ipynb) · 上一章：[SGL-04｜原理｜请求旅程：从 HTTP 到流式返回](./04-request-path.md) · [目录](./README.md) · 下一章：[SGL-06｜原理｜Chunked prefill：切块大小、mixed chunk 与 TTFT / ITL 的取舍](./06-chunked-prefill.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/05-scheduler.ipynb) · 上一章：[SGL-04｜原理｜请求旅程：从 HTTP 到流式返回](./04-request-path.md) · [目录](./README.md) · 下一章：[SGL-06｜原理｜Chunked prefill：切块大小、mixed chunk 与 TTFT / ITL 的取舍](./06-chunked-prefill.md)

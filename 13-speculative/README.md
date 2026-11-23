@@ -1,6 +1,6 @@
 # SGL-13 投机解码
 
-[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/13-speculative.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/13-speculative.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
 
 对应飞书文档：SGL-13｜原理｜投机解码：EAGLE、MTP、NGRAM 怎么选、怎么调。
 

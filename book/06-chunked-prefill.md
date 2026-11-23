@@ -401,4 +401,4 @@ chunked prefill 在 SGLang 里被拆成了两件事：切块管显存，mixed �
 
 ---
 
-[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/06-chunked-prefill.ipynb) · 上一章：[SGL-05｜原理｜调度器：waiting、running 与 KV 预算](./05-scheduler.md) · [目录](./README.md) · 下一章：[SGL-07｜原理｜内存池与页表：req_to_token、token_to_kv 与 page size](./07-memory-pool.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/06-chunked-prefill.ipynb) · 上一章：[SGL-05｜原理｜调度器：waiting、running 与 KV 预算](./05-scheduler.md) · [目录](./README.md) · 下一章：[SGL-07｜原理｜内存池与页表：req_to_token、token_to_kv 与 page size](./07-memory-pool.md)

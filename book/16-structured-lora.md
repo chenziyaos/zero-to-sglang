@@ -707,4 +707,4 @@ vLLM 那边多两条限制：`--max-lora-rank` 只能取 1、8、16、32、64、
 
 ---
 
-[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/16-structured-lora.ipynb) · 上一章：[SGL-15｜原理｜PD 分离：prefill 和 decode 拆到两组卡上](./15-pd-disagg.md) · [目录](./README.md) · 下一章：[SGL-17｜实战｜参数调优手册：从日志倒推配置](./17-tuning.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/16-structured-lora.ipynb) · 上一章：[SGL-15｜原理｜PD 分离：prefill 和 decode 拆到两组卡上](./15-pd-disagg.md) · [目录](./README.md) · 下一章：[SGL-17｜实战｜参数调优手册：从日志倒推配置](./17-tuning.md)

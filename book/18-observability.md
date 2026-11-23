@@ -732,4 +732,4 @@ OK
 
 ---
 
-[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/18-observability.ipynb) · 上一章：[SGL-17｜实战｜参数调优手册：从日志倒推配置](./17-tuning.md) · [目录](./README.md) · 下一章：[SGL-19｜实战｜集群与 RL rollout：路由、权重同步与长尾](./19-cluster-rl.md)
+[在 Colab 里跑本章 CPU 练习](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/18-observability.ipynb) · 上一章：[SGL-17｜实战｜参数调优手册：从日志倒推配置](./17-tuning.md) · [目录](./README.md) · 下一章：[SGL-19｜实战｜集群与 RL rollout：路由、权重同步与长尾](./19-cluster-rl.md)

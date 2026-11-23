@@ -1,6 +1,6 @@
 # SGL-21 DeepSeek 组件的离线检查
 
-[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chenziyaos/zero-to-sglang/blob/main/colab/21-deepseek.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
+[![在 Colab 中打开](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zyaochen/zero-to-sglang/blob/main/colab/21-deepseek.ipynb)　CPU 练习和单元测试可以直接在 Colab 里跑。
 
 对应飞书文档：SGL-21｜前沿｜DeepSeek 开源如何改写 SGLang：从 kernel 到 DeepInfer。文档按时间线讲 DeepSeek 的模型、kernel 和 DeepInfer 引擎怎样一步步改变 SGLang 的工作重心；本目录的两个脚本对应文档第 4、5 章：起 V4.1 服务前先离线算出启动参数会被解析成什么，复测 DeepInfer 前先列出两份配置哪里没对齐。
 

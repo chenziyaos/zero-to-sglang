@@ -1,14 +1,14 @@
 # Online edition of book/, published to GitHub Pages by .github/workflows/pages.yml.
 # Local preview: pip install -r docs-site/requirements.txt && mkdocs serve
 site_name: 从 0 开始 SGLang
-site_url: https://chenziyaos.github.io/zero-to-sglang/
+site_url: https://zyaochen.github.io/zero-to-sglang/
 site_description: 按章拆 SGLang：内存池与页表、RadixAttention、overlap 调度、HiCache、PD 分离与 Embedding / Rerank 服务。
-repo_url: https://github.com/chenziyaos/zero-to-sglang
-repo_name: chenziyaos/zero-to-sglang
+repo_url: https://github.com/zyaochen/zero-to-sglang
+repo_name: zyaochen/zero-to-sglang
 edit_uri: blob/main/book/
 docs_dir: book
 site_dir: site
-copyright: <a href="https://chenziyaos.github.io/">chenziyaos</a> · MIT
+copyright: <a href="https://zyaochen.github.io/">zyaochen</a> · MIT
 
 theme:
   name: material
@@ -72,4 +72,4 @@ extra:
   repo_prefix: "book"
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/chenziyaos
+      link: https://github.com/zyaochen
